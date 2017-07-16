@@ -62,3 +62,10 @@ Session.vim
 *~
 # auto-generated tag files
 tags
+
+# Elm
+
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*
