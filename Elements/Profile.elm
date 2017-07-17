@@ -6,12 +6,12 @@ import Html.Attributes exposing ( .. )
 type alias Profile =
   { name : String
   , location : String
-  , description : List String
+  , description : String
   }
 
 calmery : Profile
 calmery =
-  Profile "Calmery" "Kumamoto, Japan" [ "Interested in WebAssembly and Functional Programming", "Prisma Illya / Yuruyuri" ]
+  Profile "Calmery" "Kumamoto, Japan" "Interested in WebAssembly and Functional Programming\nPrisma Illya / Yuruyuri"
 
 profile : Html msg
 profile = (\p ->
@@ -21,8 +21,5 @@ profile = (\p ->
       , div [ id "location" ]
             [ text p.location ]
       , div [ id "description" ]
-            [ text "Interested in WebAssembly and Functional Programming"
-            , br [] []
-            , text "Prisma Illya / Yuruyuri"
-            ]
+            ( List.intersperse ( br [] [] ) ( List.map (\s -> text s) ( String.split "\n" p.description ) ) )
       ] ) calmery
