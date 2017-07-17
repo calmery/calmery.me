@@ -57,23 +57,23 @@ body {
 
 #icon #select {
   float: left;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 #icon #select .btn {
-  width: 23px;
-  height: 23px;
+  width: 26px;
+  height: 26px;
   background: red;
   border-radius: 100%;
-  margin-top: 15px;
-  border: 1px solid rgba( 200, 200, 200, 1 );
+  margin-top: 10px;
+  border: 2px solid rgba( 200, 200, 200, 1 );
   -webkit-transition: 1s ease;
   -moz-transition: 1s ease;
   transition: 1s ease;
 }
 
 #icon #select .btn:first-child {
-  margin-top: 19px;
+  margin-top: 14px;
 }
 
 #icon #select .btn:hover {
