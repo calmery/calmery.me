@@ -1,10 +1,10 @@
 port module Main exposing ( .. )
 
-import Html exposing ( div, text, a, img, program, Html, p, br, button )
+import Html exposing ( Html, div, text, a, img, program, p, br, button )
 import Html.Attributes exposing ( .. )
 import Html.Events exposing ( onClick )
 
-import Elements.Icon exposing( icon, icons, Icon )
+import Elements.Icon exposing( icons, Icon )
 import Elements.Profile exposing( profile )
 import Elements.Links exposing( linkList )
 
@@ -25,17 +25,18 @@ type Msg =
 
 -- View
 
-getIcon index = get ( length index - 1 ) ( fromList icons )
+createIconView model =
+  case model of
+    Just m ->
+      m.src
+    Nothing ->
+      "icon3.png"
 
 view : Model -> Html Msg
 view model =
-  case model of
-    Just m ->
       div [ id "field" ]
           [ div [ id "icon" ]
-              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icons/" ++ m.src ++ ") 0% 0% / cover" )
-                                                                   ]
-                    ]
+              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icons/" ++ ( createIconView model ) ++ " ) 0% 0% / cover" ) ] ]
                     []
               , div [ id "select" ]
                     [ div [ class "btn", onClick ( ChangeIcon 0 ), style [ ( "background", "url( resources/img/icons/icon1.png ) 0% 0% / cover" )
@@ -51,19 +52,6 @@ view model =
               ]
           , profile
           , linkList
-          ]
-    Nothing ->
-      div [ id "field" ]
-          [ div [ id "icon" ]
-              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icons/icon3.png) 0% 0% / cover" )
-                                                                   ]
-                    ]
-                    []
-              ]
-          , profile
-          , linkList
-          , button [ onClick ( ChangeIcon 1 ) ]
-                   [ text "Change" ]
           ]
 
 -- Update
