@@ -34,12 +34,12 @@ body {
 }
 
 #icon {
-    width: 138px;
+    width: 178px;
     height: 138px;
     top: 75px;
     left: 50%;
     position: absolute;
-    margin-left: -69px;
+    margin-left: -89px;
 }
 
 #icon #src {
@@ -49,9 +49,35 @@ body {
     border-radius: 100%;
     width: 128px;
     height: 128px;
-    -webkit-transition: 1.5s ease;
-    -moz-transition: 1.5s ease;
-    transition: 1.5s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    transition: 1s ease;
+    float: left;
+}
+
+#icon #select {
+  float: left;
+  margin-left: 15px;
+}
+
+#icon #select .btn {
+  width: 23px;
+  height: 23px;
+  background: red;
+  border-radius: 100%;
+  margin-top: 15px;
+  border: 1px solid rgba( 200, 200, 200, 1 );
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  transition: 1s ease;
+}
+
+#icon #select .btn:first-child {
+  margin-top: 19px;
+}
+
+#icon #select .btn:hover {
+  border-color: rgba( 193, 63, 75, 1 );
 }
 
 #icon #src:hover {
@@ -102,9 +128,9 @@ body {
     height: 64px;
     border-radius: 100%;
     background: rgba( 200, 200, 200, 1 );
-    -webkit-transition: 1.5s ease;
-    -moz-transition: 1.5s ease;
-    transition: 1.5s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    transition: 1s ease;
 }
 
 #link .wrapper a div:hover {
