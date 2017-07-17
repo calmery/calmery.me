@@ -1,4 +1,4 @@
-module Elements.Icon exposing ( Icon, icon )
+module Elements.Icon exposing ( Icon, icon, icons )
 
 import Html exposing ( Html, div )
 import Html.Attributes exposing ( .. )
@@ -19,4 +19,9 @@ icon =
   div [ id "icon" ]
       [ div [ id "src", attribute "ontouchstart" "" ]
             []
+      , div [ id "select" ]
+            [ div [ class "btn" ]
+                  []
+            
+            ]
       ]
