@@ -1,9 +1,10 @@
 port module Main exposing ( .. )
 
-import Html exposing ( div, text, a, img, program, Html, p, br )
+import Html exposing ( div, text, a, img, program, Html, p, br, button )
 import Html.Attributes exposing ( .. )
+import Html.Events exposing ( onClick )
 
-import Elements.Icon exposing( icon )
+import Elements.Icon exposing( icon, Icon )
 import Elements.Profile exposing( profile )
 import Elements.Links exposing( linkList )
 
@@ -11,32 +12,40 @@ import Elements.Links exposing( linkList )
 
 port title : String -> Cmd a
 
-type alias Model =
-  {}
+type alias Model = Icon
 
 init : ( Model, Cmd Msg )
-init = ( {}, title "Calmery.me" )
+init = ( Icon "icon3.png" "icon_line3.jpg", title "Calmery.me" )
 
 -- Message
 
 type Msg =
-  NoOp
+  ChangeIcon Int
 
 -- View
 
 view : Model -> Html Msg
 view model =
   div [ id "field" ]
-      [ icon
+      [ div [ id "icon" ]
+          [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icon/" ++ model.src ++ ") 0% 0% / cover" )
+                                                               ]
+                ]
+                []
+          ]
       , profile
       , linkList
+      , button [ onClick ( ChangeIcon 2 ) ]
+               [ text "Change" ]
       ]
 
 -- Update
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  ( {}, Cmd.none )
+  case msg of
+    ChangeIcon index ->
+      ( Icon "icon2.jpg" "icon_line2.jpg", Cmd.none )
 
 -- Subscriptions
 
