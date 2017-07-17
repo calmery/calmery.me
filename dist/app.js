@@ -8566,7 +8566,7 @@ var _user$project$Main$view = function (model) {
 													_0: 'background',
 													_1: A2(
 														_elm_lang$core$Basics_ops['++'],
-														'url( resources/img/icon/',
+														'url( resources/img/icons/',
 														A2(_elm_lang$core$Basics_ops['++'], _p1._0.src, ') 0% 0% / cover'))
 												},
 												_1: {ctor: '[]'}
@@ -8601,7 +8601,7 @@ var _user$project$Main$view = function (model) {
 													_0: _elm_lang$html$Html_Attributes$style(
 														{
 															ctor: '::',
-															_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icon/icon1.png ) 0% 0% / cover'},
+															_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icons/icon1.png ) 0% 0% / cover'},
 															_1: {ctor: '[]'}
 														}),
 													_1: {ctor: '[]'}
@@ -8625,7 +8625,7 @@ var _user$project$Main$view = function (model) {
 														_0: _elm_lang$html$Html_Attributes$style(
 															{
 																ctor: '::',
-																_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icon/icon2.jpg ) 0% 0% / cover'},
+																_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icons/icon2.jpg ) 0% 0% / cover'},
 																_1: {ctor: '[]'}
 															}),
 														_1: {ctor: '[]'}
@@ -8649,7 +8649,7 @@ var _user$project$Main$view = function (model) {
 															_0: _elm_lang$html$Html_Attributes$style(
 																{
 																	ctor: '::',
-																	_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icon/icon3.png ) 0% 0% / cover'},
+																	_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icons/icon3.png ) 0% 0% / cover'},
 																	_1: {ctor: '[]'}
 																}),
 															_1: {ctor: '[]'}
@@ -8706,7 +8706,7 @@ var _user$project$Main$view = function (model) {
 										_0: _elm_lang$html$Html_Attributes$style(
 											{
 												ctor: '::',
-												_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icon/icon3.png) 0% 0% / cover'},
+												_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icons/icon3.png) 0% 0% / cover'},
 												_1: {ctor: '[]'}
 											}),
 										_1: {ctor: '[]'}

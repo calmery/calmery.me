@@ -33,18 +33,18 @@ view model =
     Just m ->
       div [ id "field" ]
           [ div [ id "icon" ]
-              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icon/" ++ m.src ++ ") 0% 0% / cover" )
+              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icons/" ++ m.src ++ ") 0% 0% / cover" )
                                                                    ]
                     ]
                     []
               , div [ id "select" ]
-                    [ div [ class "btn", onClick ( ChangeIcon 0 ), style [ ( "background", "url( resources/img/icon/icon1.png ) 0% 0% / cover" )
+                    [ div [ class "btn", onClick ( ChangeIcon 0 ), style [ ( "background", "url( resources/img/icons/icon1.png ) 0% 0% / cover" )
                                                                          ] ]
                           []
-                    , div [ class "btn", onClick ( ChangeIcon 1 ), style [ ( "background", "url( resources/img/icon/icon2.jpg ) 0% 0% / cover" )
+                    , div [ class "btn", onClick ( ChangeIcon 1 ), style [ ( "background", "url( resources/img/icons/icon2.jpg ) 0% 0% / cover" )
                                                                          ] ]
                           []
-                    , div [ class "btn", onClick ( ChangeIcon 2 ), style [ ( "background", "url( resources/img/icon/icon3.png ) 0% 0% / cover" )
+                    , div [ class "btn", onClick ( ChangeIcon 2 ), style [ ( "background", "url( resources/img/icons/icon3.png ) 0% 0% / cover" )
                                                                          ] ]
                           []
                     ]
@@ -55,7 +55,7 @@ view model =
     Nothing ->
       div [ id "field" ]
           [ div [ id "icon" ]
-              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icon/icon3.png) 0% 0% / cover" )
+              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icons/icon3.png) 0% 0% / cover" )
                                                                    ]
                     ]
                     []
