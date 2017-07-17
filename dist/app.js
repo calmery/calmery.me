@@ -8260,6 +8260,14 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
+var _user$project$Elements_Icon$createIconView = function (model) {
+	var _p0 = model;
+	if (_p0.ctor === 'Just') {
+		return _p0._0.src;
+	} else {
+		return 'icon3.png';
+	}
+};
 var _user$project$Elements_Icon$Icon = F2(
 	function (a, b) {
 		return {src: a, line_src: b};
@@ -8269,13 +8277,128 @@ var _user$project$Elements_Icon$icons = {
 	_0: A2(_user$project$Elements_Icon$Icon, 'icon1.png', 'icon_line1.jpg'),
 	_1: {
 		ctor: '::',
-		_0: A2(_user$project$Elements_Icon$Icon, 'icon2.jpg', 'icon_line2.jpg'),
+		_0: A2(_user$project$Elements_Icon$Icon, 'icon2.png', 'icon_line2.jpg'),
 		_1: {
 			ctor: '::',
 			_0: A2(_user$project$Elements_Icon$Icon, 'icon3.png', 'icon_line3.jpg'),
 			_1: {ctor: '[]'}
 		}
 	}
+};
+var _user$project$Elements_Icon$init = A2(
+	_elm_lang$core$Array$get,
+	_elm_lang$core$Array$length(
+		_elm_lang$core$Array$fromList(_user$project$Elements_Icon$icons)) - 1,
+	_elm_lang$core$Array$fromList(_user$project$Elements_Icon$icons));
+var _user$project$Elements_Icon$ChangeIcon = function (a) {
+	return {ctor: 'ChangeIcon', _0: a};
+};
+var _user$project$Elements_Icon$menu = function (list) {
+	return A2(
+		_elm_lang$core$List$map,
+		function (l) {
+			return A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('btn'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onClick(
+							_user$project$Elements_Icon$ChangeIcon(l)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'background',
+										_1: A2(
+											_elm_lang$core$Basics_ops['++'],
+											'url( resources/img/icons/icon',
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												_elm_lang$core$Basics$toString(l + 1),
+												'.png ) 0% 0% / cover'))
+									},
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{ctor: '[]'});
+		},
+		list);
+};
+var _user$project$Elements_Icon$icon = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('icon'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$id('src'),
+					_1: {
+						ctor: '::',
+						_0: A2(_elm_lang$html$Html_Attributes$attribute, 'ontouchstart', ''),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'background',
+										_1: A2(
+											_elm_lang$core$Basics_ops['++'],
+											'url( resources/img/icons/',
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												_user$project$Elements_Icon$createIconView(model),
+												' ) 0% 0% / cover'))
+									},
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('select'),
+						_1: {ctor: '[]'}
+					},
+					_user$project$Elements_Icon$menu(
+						{
+							ctor: '::',
+							_0: 0,
+							_1: {
+								ctor: '::',
+								_0: 1,
+								_1: {
+									ctor: '::',
+									_0: 2,
+									_1: {ctor: '[]'}
+								}
+							}
+						})),
+				_1: {ctor: '[]'}
+			}
+		});
 };
 
 var _user$project$Elements_Links$create = function (links) {
@@ -8459,31 +8582,6 @@ var _user$project$Main$update = F2(
 			_1: _elm_lang$core$Platform_Cmd$none
 		};
 	});
-var _user$project$Main$createIconView = function (model) {
-	var _p1 = model;
-	if (_p1.ctor === 'Just') {
-		return _p1._0.src;
-	} else {
-		return 'icon3.png';
-	}
-};
-var _user$project$Main$title = _elm_lang$core$Native_Platform.outgoingPort(
-	'title',
-	function (v) {
-		return v;
-	});
-var _user$project$Main$init = {
-	ctor: '_Tuple2',
-	_0: A2(
-		_elm_lang$core$Array$get,
-		_elm_lang$core$Array$length(
-			_elm_lang$core$Array$fromList(_user$project$Elements_Icon$icons)) - 1,
-		_elm_lang$core$Array$fromList(_user$project$Elements_Icon$icons)),
-	_1: _user$project$Main$title('Calmery.me')
-};
-var _user$project$Main$ChangeIcon = function (a) {
-	return {ctor: 'ChangeIcon', _0: a};
-};
 var _user$project$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -8494,134 +8592,7 @@ var _user$project$Main$view = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$id('icon'),
-					_1: {ctor: '[]'}
-				},
-				{
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$id('src'),
-							_1: {
-								ctor: '::',
-								_0: A2(_elm_lang$html$Html_Attributes$attribute, 'ontouchstart', ''),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$style(
-										{
-											ctor: '::',
-											_0: {
-												ctor: '_Tuple2',
-												_0: 'background',
-												_1: A2(
-													_elm_lang$core$Basics_ops['++'],
-													'url( resources/img/icons/',
-													A2(
-														_elm_lang$core$Basics_ops['++'],
-														_user$project$Main$createIconView(model),
-														' ) 0% 0% / cover'))
-											},
-											_1: {ctor: '[]'}
-										}),
-									_1: {ctor: '[]'}
-								}
-							}
-						},
-						{ctor: '[]'}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$div,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$id('select'),
-								_1: {ctor: '[]'}
-							},
-							{
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$div,
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('btn'),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onClick(
-												_user$project$Main$ChangeIcon(0)),
-											_1: {
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$style(
-													{
-														ctor: '::',
-														_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icons/icon1.png ) 0% 0% / cover'},
-														_1: {ctor: '[]'}
-													}),
-												_1: {ctor: '[]'}
-											}
-										}
-									},
-									{ctor: '[]'}),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_elm_lang$html$Html$div,
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$class('btn'),
-											_1: {
-												ctor: '::',
-												_0: _elm_lang$html$Html_Events$onClick(
-													_user$project$Main$ChangeIcon(1)),
-												_1: {
-													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$style(
-														{
-															ctor: '::',
-															_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icons/icon2.jpg ) 0% 0% / cover'},
-															_1: {ctor: '[]'}
-														}),
-													_1: {ctor: '[]'}
-												}
-											}
-										},
-										{ctor: '[]'}),
-									_1: {
-										ctor: '::',
-										_0: A2(
-											_elm_lang$html$Html$div,
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class('btn'),
-												_1: {
-													ctor: '::',
-													_0: _elm_lang$html$Html_Events$onClick(
-														_user$project$Main$ChangeIcon(2)),
-													_1: {
-														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$style(
-															{
-																ctor: '::',
-																_0: {ctor: '_Tuple2', _0: 'background', _1: 'url( resources/img/icons/icon3.png ) 0% 0% / cover'},
-																_1: {ctor: '[]'}
-															}),
-														_1: {ctor: '[]'}
-													}
-												}
-											},
-											{ctor: '[]'}),
-										_1: {ctor: '[]'}
-									}
-								}
-							}),
-						_1: {ctor: '[]'}
-					}
-				}),
+			_0: _user$project$Elements_Icon$icon(model),
 			_1: {
 				ctor: '::',
 				_0: _user$project$Elements_Profile$profile,
@@ -8632,6 +8603,16 @@ var _user$project$Main$view = function (model) {
 				}
 			}
 		});
+};
+var _user$project$Main$title = _elm_lang$core$Native_Platform.outgoingPort(
+	'title',
+	function (v) {
+		return v;
+	});
+var _user$project$Main$init = {
+	ctor: '_Tuple2',
+	_0: _user$project$Elements_Icon$init,
+	_1: _user$project$Main$title('Calmery.me')
 };
 var _user$project$Main$main = _elm_lang$html$Html$program(
 	{init: _user$project$Main$init, view: _user$project$Main$view, update: _user$project$Main$update, subscriptions: _user$project$Main$subscriptions})();
