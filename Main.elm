@@ -4,7 +4,7 @@ import Html exposing ( Html, div, text, a, img, program, p, br, button )
 import Html.Attributes exposing ( .. )
 import Html.Events exposing ( onClick )
 
-import Elements.Icon exposing( icons, Icon )
+import Elements.Icon exposing( icons, Msg(..), icon )
 import Elements.Profile exposing( profile )
 import Elements.Links exposing( linkList )
 
@@ -14,42 +14,20 @@ import Array exposing ( .. )
 
 port title : String -> Cmd a
 
-type alias Model = Maybe Icon
+type alias Model = Elements.Icon.Model
 
-init = ( get ( length ( fromList icons ) - 1 ) ( fromList icons ), title "Calmery.me" )
+init = ( Elements.Icon.init, title "Calmery.me" )
 
 -- Message
 
-type Msg =
-  ChangeIcon Int
+type alias Msg = Elements.Icon.Msg
 
 -- View
 
-createIconView model =
-  case model of
-    Just m ->
-      m.src
-    Nothing ->
-      "icon3.png"
-
-view : Model -> Html Msg
+view : Model -> Html Elements.Icon.Msg
 view model =
       div [ id "field" ]
-          [ div [ id "icon" ]
-              [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icons/" ++ ( createIconView model ) ++ " ) 0% 0% / cover" ) ] ]
-                    []
-              , div [ id "select" ]
-                    [ div [ class "btn", onClick ( ChangeIcon 0 ), style [ ( "background", "url( resources/img/icons/icon1.png ) 0% 0% / cover" )
-                                                                         ] ]
-                          []
-                    , div [ class "btn", onClick ( ChangeIcon 1 ), style [ ( "background", "url( resources/img/icons/icon2.jpg ) 0% 0% / cover" )
-                                                                         ] ]
-                          []
-                    , div [ class "btn", onClick ( ChangeIcon 2 ), style [ ( "background", "url( resources/img/icons/icon3.png ) 0% 0% / cover" )
-                                                                         ] ]
-                          []
-                    ]
-              ]
+          [ icon model
           , profile
           , linkList
           ]
