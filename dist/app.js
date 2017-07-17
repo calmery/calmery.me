@@ -8487,19 +8487,7 @@ var _user$project$Elements_Profile$Profile = F3(
 	function (a, b, c) {
 		return {name: a, location: b, description: c};
 	});
-var _user$project$Elements_Profile$calmery = A3(
-	_user$project$Elements_Profile$Profile,
-	'Calmery',
-	'Kumamoto, Japan',
-	{
-		ctor: '::',
-		_0: 'Interested in WebAssembly and Functional Programming',
-		_1: {
-			ctor: '::',
-			_0: 'Prisma Illya / Yuruyuri',
-			_1: {ctor: '[]'}
-		}
-	});
+var _user$project$Elements_Profile$calmery = A3(_user$project$Elements_Profile$Profile, 'Calmery', 'Kumamoto, Japan', 'Interested in WebAssembly and Functional Programming\nPrisma Illya / Yuruyuri');
 var _user$project$Elements_Profile$profile = function (p) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -8545,22 +8533,18 @@ var _user$project$Elements_Profile$profile = function (p) {
 							_0: _elm_lang$html$Html_Attributes$id('description'),
 							_1: {ctor: '[]'}
 						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Interested in WebAssembly and Functional Programming'),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$br,
-									{ctor: '[]'},
-									{ctor: '[]'}),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('Prisma Illya / Yuruyuri'),
-									_1: {ctor: '[]'}
-								}
-							}
-						}),
+						A2(
+							_elm_lang$core$List$intersperse,
+							A2(
+								_elm_lang$html$Html$br,
+								{ctor: '[]'},
+								{ctor: '[]'}),
+							A2(
+								_elm_lang$core$List$map,
+								function (s) {
+									return _elm_lang$html$Html$text(s);
+								},
+								A2(_elm_lang$core$String$split, '\n', p.description)))),
 					_1: {ctor: '[]'}
 				}
 			}
