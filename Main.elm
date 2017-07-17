@@ -1,42 +1,44 @@
 port module Main exposing ( .. )
 
-import Html exposing ( div, text, a, img, program, Html, p, br )
+import Html exposing ( Html, div, text, a, img, program, p, br, button )
 import Html.Attributes exposing ( .. )
+import Html.Events exposing ( onClick )
 
-import Elements.Icon exposing( icon )
+import Elements.Icon exposing( icons, Msg(..), icon )
 import Elements.Profile exposing( profile )
 import Elements.Links exposing( linkList )
+
+import Array exposing ( .. )
 
 -- Model
 
 port title : String -> Cmd a
 
-type alias Model =
-  {}
+type alias Model = Elements.Icon.Model
 
-init : ( Model, Cmd Msg )
-init = ( {}, title "Calmery.me" )
+init = ( Elements.Icon.init, title "Calmery.me" )
 
 -- Message
 
-type Msg =
-  NoOp
+type alias Msg = Elements.Icon.Msg
 
 -- View
 
-view : Model -> Html Msg
+view : Model -> Html Elements.Icon.Msg
 view model =
-  div [ id "field" ]
-      [ icon
-      , profile
-      , linkList
-      ]
+      div [ id "field" ]
+          [ icon model
+          , profile
+          , linkList
+          ]
 
 -- Update
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  ( {}, Cmd.none )
+  case msg of
+    ChangeIcon index ->
+      ( get index ( fromList icons ), Cmd.none )
 
 -- Subscriptions
 
