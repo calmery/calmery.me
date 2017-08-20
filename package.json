@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "prettify": "elm-format src/Main.elm"
+  },
+  "dependencies": {
+    "elm-format": "^0.6.1-alpha"
+  }
+}
