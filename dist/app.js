@@ -8491,7 +8491,7 @@ var _user$project$Elements_Profile$Profile = F3(
 	function (a, b, c) {
 		return {name: a, location: b, description: c};
 	});
-var _user$project$Elements_Profile$calmery = A3(_user$project$Elements_Profile$Profile, 'Calmery', 'Kumamoto, Japan', 'Interested in WebAssembly and Functional Programming\nPrisma Illya / Yuruyuri');
+var _user$project$Elements_Profile$calmery = A3(_user$project$Elements_Profile$Profile, 'Calmery', 'Kumamoto, Japan', 'Interested in Elm and WebAssembly.\nPrisma Illya / Yuruyuri / Princess Principal');
 var _user$project$Elements_Profile$profile = function (p) {
 	return A2(
 		_elm_lang$html$Html$div,

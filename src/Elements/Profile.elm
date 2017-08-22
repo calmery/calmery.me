@@ -13,7 +13,7 @@ type alias Profile =
 
 calmery : Profile
 calmery =
-    Profile "Calmery" "Kumamoto, Japan" "Interested in WebAssembly and Functional Programming\nPrisma Illya / Yuruyuri"
+    Profile "Calmery" "Kumamoto, Japan" "Interested in Elm and WebAssembly.\nPrisma Illya / Yuruyuri / Princess Principal"
 
 
 profile : Html msg
