@@ -8281,7 +8281,11 @@ var _user$project$Elements_Icon$icons = {
 		_1: {
 			ctor: '::',
 			_0: A2(_user$project$Elements_Icon$Icon, 'icon3.png', 'icon_line3.jpg'),
-			_1: {ctor: '[]'}
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Elements_Icon$Icon, 'icon4.png', 'icon_line4.jpg'),
+				_1: {ctor: '[]'}
+			}
 		}
 	}
 };
