@@ -104,13 +104,13 @@ body {
 }
 
 #link {
-    width: 304px;
+    width: 224px;
     height: 64px;
     margin: 0 auto;
     left: 50%;
     bottom: 75px;
     position: absolute;
-    margin-left: -152px;
+    margin-left: -112px;
     text-align: center;
 }
 

@@ -8473,15 +8473,11 @@ var _user$project$Elements_Links$links = {
 	_0: A3(_user$project$Elements_Links$Link, 'Twitter', 'http://twitter.com/calmeryme', 'resources/img/twitter.png'),
 	_1: {
 		ctor: '::',
-		_0: A3(_user$project$Elements_Links$Link, 'Mastodon(Pawoo)', 'http://pawoo.net/@calmery', 'resources/img/mastodon.png'),
+		_0: A3(_user$project$Elements_Links$Link, 'GitHub', 'http://github.com/calmery', 'resources/img/github.png'),
 		_1: {
 			ctor: '::',
-			_0: A3(_user$project$Elements_Links$Link, 'GitHub', 'http://github.com/calmery', 'resources/img/github.png'),
-			_1: {
-				ctor: '::',
-				_0: A3(_user$project$Elements_Links$Link, 'Blog', 'http://blog.calmery.me', 'resources/img/blog.png'),
-				_1: {ctor: '[]'}
-			}
+			_0: A3(_user$project$Elements_Links$Link, 'Blog', 'http://blog.calmery.me', 'resources/img/blog.png'),
+			_1: {ctor: '[]'}
 		}
 	}
 };
