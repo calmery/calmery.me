@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=700">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="content-script-type" content="text/javascript">
+
+    <link rel="apple-touch-icon" href="resources/img/icons/icon4.png">
+
+    <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="resources/css/style.css">
+  </head>
+
+  <body></body>
+
+  <script src="app.js"></script>
+  <script>
+    const app = Elm.Main.fullscreen()
+    app.ports.title.subscribe( title => {
+      document.title = title
+    } )
+  </script>
+
+</html>

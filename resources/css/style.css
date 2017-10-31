@@ -1,0 +1,144 @@
+body {
+    background: rgba( 240, 240, 240, 1 )
+}
+
+#field {
+    color: rgba( 60, 60, 60, 1 );
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    width: 600px;
+    height: 500px;
+    background: rgba( 255, 255, 255, 1 );
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -250px 0 0 -300px;
+    border-radius: 5px;
+    border: 1px solid rgba( 200, 200, 200, 1 );
+    opacity: 0;
+    -webkit-animation: 2s fadein forwards;
+    -moz-animation: 2s fadein forwards;
+    animation: 2s fadein forwards;
+}
+
+@-webkit-keyframes fadein {
+    to { opacity: 1 }
+}
+
+@-moz-keyframes fadein {
+    to { opacity: 1 }
+}
+
+@keyframes fadein {
+    to { opacity: 1 }
+}
+
+#icon {
+    width: 178px;
+    height: 138px;
+    top: 75px;
+    left: 50%;
+    position: absolute;
+    margin-left: -89px;
+}
+
+#icon #src {
+    background: url( ../img/icon.png );
+    background-size: cover;
+    border: 5px solid rgba( 200, 200, 200, 1 );
+    border-radius: 100%;
+    width: 128px;
+    height: 128px;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    transition: 1s ease;
+    float: left;
+}
+
+#icon #select {
+  float: left;
+  margin-left: 10px;
+}
+
+#icon #select .btn {
+  width: 26px;
+  height: 26px;
+  background: red;
+  border-radius: 100%;
+  margin-top: 10px;
+  border: 2px solid rgba( 200, 200, 200, 1 );
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  transition: 1s ease;
+}
+
+#icon #select .btn:first-child {
+  margin-top: 14px;
+}
+
+#icon #select .btn:hover {
+  border-color: rgba( 193, 63, 75, 1 );
+}
+
+#icon #src:hover {
+    border-color: rgba( 193, 63, 75, 1 );
+    background: url( ../img/icon_line.jpg );
+    background-size: cover;
+}
+
+#profile {
+    width: 100%;
+    top: 233px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+}
+
+#profile #name {
+    font-size: 22px;
+}
+
+#profile #description {
+    margin: 20px 0;
+    line-height: 20px;
+}
+
+#link {
+    width: 224px;
+    height: 64px;
+    margin: 0 auto;
+    left: 50%;
+    bottom: 75px;
+    position: absolute;
+    margin-left: -112px;
+    text-align: center;
+}
+
+#link .wrapper {
+    float: left;
+    margin-right: 16px;
+}
+
+#link .wrapper:last-child {
+    margin-right: 0;
+}
+
+#link .wrapper a div {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background: rgba( 200, 200, 200, 1 );
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    transition: 1s ease;
+}
+
+#link .wrapper a div:hover {
+    background: rgba( 193, 63, 75, 1 );
+}
+
+#link .wrapper a div img {
+    margin-top: 17px;
+    width: 32px;
+    height: 32px;
+}
