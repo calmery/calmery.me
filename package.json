@@ -1,9 +1,13 @@
 {
   "scripts": {
     "build": "elm make ./src/Main.elm --output ./dist/app.js",
-    "prettify": "elm-format src/Main.elm"
+    "prettify": "elm-format src/Main.elm",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "elm-format": "^0.6.1-alpha"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }
