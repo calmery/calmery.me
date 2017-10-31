@@ -4,10 +4,9 @@
     "prettify": "elm-format src/Main.elm",
     "deploy": "gh-pages -d dist"
   },
-  "dependencies": {
-    "elm-format": "^0.6.1-alpha"
-  },
   "devDependencies": {
+    "elm": "^0.18.0",
+    "elm-format": "^0.6.1-alpha",
     "gh-pages": "^1.0.0"
   }
 }
