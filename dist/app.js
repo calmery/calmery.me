@@ -8476,7 +8476,7 @@ var _user$project$Elements_Links$links = {
 		_0: A3(_user$project$Elements_Links$Link, 'GitHub', 'http://github.com/calmery', 'resources/img/github.png'),
 		_1: {
 			ctor: '::',
-			_0: A3(_user$project$Elements_Links$Link, 'Blog', 'http://blog.calmery.me', 'resources/img/blog.png'),
+			_0: A3(_user$project$Elements_Links$Link, 'Blog', 'http://calmery.hatenablog.com', 'resources/img/blog.png'),
 			_1: {ctor: '[]'}
 		}
 	}
