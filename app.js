@@ -8274,16 +8274,16 @@ var _user$project$Elements_Icon$Icon = F2(
 	});
 var _user$project$Elements_Icon$icons = {
 	ctor: '::',
-	_0: A2(_user$project$Elements_Icon$Icon, 'icon1.png', 'icon_line1.jpg'),
+	_0: A2(_user$project$Elements_Icon$Icon, 'icon2.png', 'icon_line2.jpg'),
 	_1: {
 		ctor: '::',
-		_0: A2(_user$project$Elements_Icon$Icon, 'icon2.png', 'icon_line2.jpg'),
+		_0: A2(_user$project$Elements_Icon$Icon, 'icon3.png', 'icon_line3.jpg'),
 		_1: {
 			ctor: '::',
-			_0: A2(_user$project$Elements_Icon$Icon, 'icon3.png', 'icon_line3.jpg'),
+			_0: A2(_user$project$Elements_Icon$Icon, 'icon4.png', 'icon_line4.jpg'),
 			_1: {
 				ctor: '::',
-				_0: A2(_user$project$Elements_Icon$Icon, 'icon4.png', 'icon_line4.jpg'),
+				_0: A2(_user$project$Elements_Icon$Icon, 'icon5.jpg', 'icon_line5.jpg'),
 				_1: {ctor: '[]'}
 			}
 		}
