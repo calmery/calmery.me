@@ -26,10 +26,10 @@ init =
 
 icons : List Icon
 icons =
-    [ Icon "icon1.png" "icon_line1.jpg"
-    , Icon "icon2.png" "icon_line2.jpg"
+    [ Icon "icon2.png" "icon_line2.jpg"
     , Icon "icon3.png" "icon_line3.jpg"
     , Icon "icon4.png" "icon_line4.jpg"
+    , Icon "icon5.jpg" "icon_line5.jpg"
     ]
 
 
