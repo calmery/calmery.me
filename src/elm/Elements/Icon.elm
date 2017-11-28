@@ -39,7 +39,7 @@ menu list =
             div
                 [ class "btn"
                 , onClick (ChangeIcon l)
-                , style [ ( "background", "url( resources/img/icons/icon" ++ (toString (l + 1)) ++ ".png ) 0% 0% / cover" ) ]
+                , style [ ( "background", "url( static/img/icons/icon" ++ (toString (l + 1)) ++ ".png ) 0% 0% / cover" ) ]
                 ]
                 []
         )
@@ -57,7 +57,7 @@ createIconView model =
 
 icon model =
     div [ id "icon" ]
-        [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( resources/img/icons/" ++ (createIconView model) ++ " ) 0% 0% / cover" ) ] ]
+        [ div [ id "src", attribute "ontouchstart" "", style [ ( "background", "url( static/img/icons/" ++ (createIconView model) ++ " ) 0% 0% / cover" ) ] ]
             []
         , div [ id "select" ]
             (menu [ 0, 1, 2 ])

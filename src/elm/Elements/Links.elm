@@ -13,9 +13,9 @@ type alias Link =
 
 links : List Link
 links =
-    [ Link "Twitter" "http://twitter.com/calmeryme" "resources/img/twitter.png"
-    , Link "GitHub" "http://github.com/calmery" "resources/img/github.png"
-    , Link "Blog" "http://calmery.hatenablog.com" "resources/img/blog.png"
+    [ Link "Twitter" "http://twitter.com/calmeryme" "static/img/twitter.png"
+    , Link "GitHub" "http://github.com/calmery" "static/img/github.png"
+    , Link "Blog" "http://calmery.hatenablog.com" "static/img/blog.png"
     ]
 
 
