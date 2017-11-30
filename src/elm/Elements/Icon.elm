@@ -39,7 +39,19 @@ menu list =
             div
                 [ class "btn"
                 , onClick (ChangeIcon l)
-                , style [ ( "background", "url( static/img/icons/icon" ++ (toString (l + 1)) ++ ".png ) 0% 0% / cover" ) ]
+                , style
+                    [ ( "background"
+                      , "url( static/img/icons/"
+                            ++ (case get l (fromList icons) of
+                                    Just num ->
+                                        num.src
+
+                                    Nothing ->
+                                        "icon5.png"
+                               )
+                            ++ " ) 0% 0% / cover"
+                      )
+                    ]
                 ]
                 []
         )
@@ -52,7 +64,7 @@ createIconView model =
             m.src
 
         Nothing ->
-            "icon3.png"
+            "icon5.png"
 
 
 icon model =
