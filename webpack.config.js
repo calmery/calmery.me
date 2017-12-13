@@ -53,7 +53,7 @@ const frontend = {
   ],
   output: {
     path: resolve( './dist/' ),
-    filename: 'app.js'
+    filename: 'elm.js'
   }
 }
 
