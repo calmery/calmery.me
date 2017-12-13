@@ -35,13 +35,13 @@ const frontend = {
       exclude: [/elm-stuff/, /node_modules/],
       use: 'elm-webpack-loader'
     }, {
-      test: /\.(css|scss)$/,
+      test: /\.css$/,
       use: ['style-loader', {
         loader: 'css-loader',
         options: {
           minimize: true
         }
-      }, 'sass-loader']
+      }]
     }]
   },
   plugins: [
