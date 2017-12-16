@@ -78,8 +78,8 @@ createBoardView repositories articles =
     div [ id "board" ]
         [ div [ class "label" ] [ text "Board" ]
         , div []
-            [ createRepositoryView repositories
-            , createArticleView articles
+            [ createArticleView articles
+            , createRepositoryView repositories
             ]
         ]
 
