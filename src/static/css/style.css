@@ -246,6 +246,12 @@ a:visited {
   line-height: 16px;
 }
 #contents #board .content .blog-content:hover .blog-tags .blog-tag {
+  background: rgba( 184, 233, 134, 1 );
+  border-color: rgba( 164, 213, 114, 1 );
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+#contents #board .content .blog-content:hover .blog-tags .blog-tag:hover {
   background: rgba( 164, 213, 114, 1 );
   border-color: rgba( 144, 193, 94, 1 );
   -webkit-transition: .5s ease;
