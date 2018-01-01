@@ -43,13 +43,10 @@ menus =
     [ Menu "Twitter" "static/img/twitter.png" "https://twitter.com/calmeryme"
     , Menu "Facebook" "static/img/facebook.png" "https://fb.me/marei.kikukawa"
     , Menu "GitHub" "static/img/github.png" "https://github.com/calmery"
+    , Menu "Qiita" "static/img/qiita.png" "https://qiita.com/calmery"
     , Menu "Hatenablog" "static/img/hatenablog.png" "http://calmery.hatenablog.com"
+    , Menu "Mail" "static/img/mail.png" "mailto:contact@calmery.me"
     ]
-
-
-spMenu : Menu
-spMenu =
-    Menu "Mail" "static/img/mail.png" "mailto:contact@calmery.me"
 
 
 profile : Profile

@@ -38,25 +38,17 @@ createProfileIntroduction profile =
 createMenuView : List Menu -> Html Msg
 createMenuView menus =
     div [ id "menus" ] <|
-        List.append
-            (List.append [ div [ class "label" ] [ text "Links" ] ]
-                (List.map
-                    (\menu ->
-                        a [ href menu.href ]
-                            [ div [ class "menu" ]
-                                [ wrapMenu menu
-                                ]
+        List.append [ div [ class "label" ] [ text "Links" ] ]
+            (List.map
+                (\menu ->
+                    a [ href menu.href ]
+                        [ div [ class "menu" ]
+                            [ wrapMenu menu
                             ]
-                    )
-                    menus
+                        ]
                 )
+                menus
             )
-            [ a [ href spMenu.href ]
-                [ div [ class "menu", style [ ( "bottom", "50px" ), ( "position", "absolute" ) ] ]
-                    [ wrapMenu spMenu
-                    ]
-                ]
-            ]
 
 
 wrapMenu : Menu -> Html Msg
