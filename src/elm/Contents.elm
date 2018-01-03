@@ -57,7 +57,6 @@ profile =
 repositories : List Repository
 repositories =
     [ Repository "calmery" "calmery.me" "My website written in Elm" "https://github.com/calmery/calmery.me"
-    , Repository "calmery" "Pawopy" "A Python wrapper for the Mastodon API like tweepy" "https://github.com/calmery/Pawopy"
     ]
 
 
