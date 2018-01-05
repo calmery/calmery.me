@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "watch": "webpack-dev-server --config webpack.config.js",
     "build": "rimraf ./dist/ && webpack",
     "prettify": "elm-format ./src/elm/ --yes",
     "deploy": "npm run build && gh-pages -d ./dist/"
