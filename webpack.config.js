@@ -1,8 +1,8 @@
-const path    = require( 'path' )
+const path = require( 'path' )
 const webpack = require( 'webpack' )
-const merge   = require( 'webpack-merge' )
+const merge = require( 'webpack-merge' )
 
-const MinifyPlugin      = require( 'babel-minify-webpack-plugin' )
+const MinifyPlugin = require( 'babel-minify-webpack-plugin' )
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' )
 
 const resolve = source => path.resolve( __dirname, source )
@@ -14,17 +14,7 @@ const common = {
   resolve: {
     extensions: ['.js']
   },
-  plugins: [new MinifyPlugin()],
-  module: {
-    loaders: [ {
-      test   : /\.js$/,
-      exclude: /node_modules/,
-      loader : 'babel-loader',
-      query  : {
-        presets: ["latest"]
-      }
-    } ]
-  }
+  plugins: [new MinifyPlugin()]
 }
 
 const frontend = {
