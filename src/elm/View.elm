@@ -10,40 +10,40 @@ import Contents exposing (..)
 -- Profile
 
 
-createProfileView : Profile -> Html Msg
-createProfileView profile =
+createProfile : Profile -> Html Msg
+createProfile profile =
     div [ id "profile" ]
         [ div [ id "profile-line" ] []
-        , div [ id "profile-introduction" ] <|
-            createProfileIntroduction profile
+        , div [ id "profile-introduction" ]
+            [ div [ class "clearfix" ]
+                [ div [ id "profile-name" ] [ text profile.name ]
+                , div [ id "profile-location" ] [ text profile.location ]
+                ]
+            , div [ id "profile-bio" ] [ text profile.bio ]
+            ]
         , div [ id "profile-icon" ]
             [ img [ src profile.icon ] [] ]
         ]
-
-
-createProfileIntroduction : Profile -> List (Html Msg)
-createProfileIntroduction profile =
-    [ div [ class "clearfix" ]
-        [ div [ id "profile-name" ] [ text profile.name ]
-        , div [ id "profile-location" ] [ text profile.location ]
-        ]
-    , div [ id "profile-bio" ] [ text profile.bio ]
-    ]
 
 
 
 -- Menu
 
 
-createMenuView : List Menu -> Html Msg
-createMenuView menus =
+createMenu : List Menu -> Html Msg
+createMenu menus =
     div [ id "menus" ] <|
         List.append [ div [ class "label" ] [ text "Links" ] ]
             (List.map
                 (\menu ->
                     a [ href menu.href ]
                         [ div [ class "menu" ]
-                            [ wrapMenu menu
+                            [ div [ class "menu-wrapper clearfix" ]
+                                [ div [ class "menu-icon" ]
+                                    [ img [ src <| "static/img/" ++ menu.icon ] [] ]
+                                , div [ class "menu-name" ]
+                                    [ text menu.name ]
+                                ]
                             ]
                         ]
                 )
@@ -51,33 +51,23 @@ createMenuView menus =
             )
 
 
-wrapMenu : Menu -> Html Msg
-wrapMenu menu =
-    div [ class "menu-wrapper clearfix" ]
-        [ div [ class "menu-icon" ]
-            [ img [ src menu.icon ] [] ]
-        , div [ class "menu-name" ]
-            [ text menu.name ]
-        ]
-
-
 
 -- Board
 
 
-createBoardView : List Repository -> List Article -> Html Msg
-createBoardView repositories articles =
+createBoard : List Repository -> List Article -> Html Msg
+createBoard repositories articles =
     div [ id "board" ]
         [ div [ class "label" ] [ text "Board" ]
         , div []
-            [ createArticleView articles
-            , createRepositoryView repositories
+            [ createArticle articles
+            , createRepository repositories
             ]
         ]
 
 
-createRepositoryView : List Repository -> Html Msg
-createRepositoryView repositories =
+createRepository : List Repository -> Html Msg
+createRepository repositories =
     div [ class "content" ]
         ((List.append
             [ div [ class "content-title clearfix" ]
@@ -102,8 +92,8 @@ createRepositoryView repositories =
         )
 
 
-createArticleView : List Article -> Html Msg
-createArticleView articles =
+createArticle : List Article -> Html Msg
+createArticle articles =
     div [ class "content" ]
         ((List.append
             [ div [ class "content-title clearfix" ]
@@ -148,10 +138,10 @@ footer =
 view : Model -> Html Msg
 view model =
     div [ id "container" ]
-        [ createProfileView profile
+        [ createProfile profile
         , div [ id "contents" ]
-            [ createMenuView menus
-            , createBoardView repositories articles
+            [ createMenu menus
+            , createBoard repositories articles
             , footer
             ]
         ]

@@ -4,6 +4,6 @@ import 'normalize.css'
 import './static/css/style.css'
 
 const app = Elm.Main.fullscreen()
-app.ports.setTitle.subscribe( title => {
+app.ports.setTitle.subscribe( title =>
   document.title = title
-} )
+)

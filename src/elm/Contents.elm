@@ -9,11 +9,35 @@ type alias Profile =
     }
 
 
+profile : Profile
+profile =
+    Profile "Marei Kikukawa / Calmery" "static/img/icon.jpeg" "Kumamoto, Japan" "Interested in Elm and Web Assembly"
+
+
+
+-- Menu
+
+
 type alias Menu =
     { name : String
     , icon : String
     , href : String
     }
+
+
+menus : List Menu
+menus =
+    [ Menu "Twitter" "twitter.png" "https://twitter.com/calmeryme"
+    , Menu "Facebook" "facebook.png" "https://fb.me/marei.kikukawa"
+    , Menu "GitHub" "github.png" "https://github.com/calmery"
+    , Menu "Qiita" "qiita.png" "https://qiita.com/calmery"
+    , Menu "Hatenablog" "hatenablog.png" "http://calmery.hatenablog.com"
+    , Menu "Mail" "mail.png" "mailto:contact@calmery.me"
+    ]
+
+
+
+-- Repository
 
 
 type alias Repository =
@@ -24,10 +48,14 @@ type alias Repository =
     }
 
 
-type alias Tag =
-    { name : String
-    , href : String
-    }
+repositories : List Repository
+repositories =
+    [ Repository "calmery" "calmery.me" "My website written in Elm" "https://github.com/calmery/calmery.me"
+    ]
+
+
+
+-- Article
 
 
 type alias Article =
@@ -38,26 +66,10 @@ type alias Article =
     }
 
 
-menus : List Menu
-menus =
-    [ Menu "Twitter" "static/img/twitter.png" "https://twitter.com/calmeryme"
-    , Menu "Facebook" "static/img/facebook.png" "https://fb.me/marei.kikukawa"
-    , Menu "GitHub" "static/img/github.png" "https://github.com/calmery"
-    , Menu "Qiita" "static/img/qiita.png" "https://qiita.com/calmery"
-    , Menu "Hatenablog" "static/img/hatenablog.png" "http://calmery.hatenablog.com"
-    , Menu "Mail" "static/img/mail.png" "mailto:contact@calmery.me"
-    ]
-
-
-profile : Profile
-profile =
-    Profile "Marei Kikukawa / Calmery" "static/img/icon.jpeg" "Kumamoto, Japan" "Interested in Elm and Web Assembly"
-
-
-repositories : List Repository
-repositories =
-    [ Repository "calmery" "calmery.me" "My website written in Elm" "https://github.com/calmery/calmery.me"
-    ]
+type alias Tag =
+    { name : String
+    , href : String
+    }
 
 
 articles : List Article
