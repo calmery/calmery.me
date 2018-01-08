@@ -51,6 +51,7 @@ type alias Repository =
 repositories : List Repository
 repositories =
     [ Repository "calmery" "calmery.me" "My website written in Elm" "https://github.com/calmery/calmery.me"
+    , Repository "calmery" "TIL" "Today I learned" "https://github.com/calmery/TIL"
     ]
 
 
