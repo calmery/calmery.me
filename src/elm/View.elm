@@ -132,7 +132,7 @@ createArticle articles =
 footer : Html Msg
 footer =
     div [ id "copyright" ]
-        [ text "CopyRight 2017 Calmery All Rights Reserved" ]
+        [ text "CopyRight 2017-2018 Calmery All Rights Reserved" ]
 
 
 view : Model -> Html Msg
