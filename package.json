@@ -3,7 +3,7 @@
     "watch": "webpack-dev-server --config webpack.config.js",
     "build": "rimraf ./dist/ && webpack",
     "prettify": "elm-format ./src/elm/ --yes && elm-format ./tests/ --yes",
-    "deploy": "npm run build && gh-pages -d ./dist/",
+    "deploy": "gh-pages -d ./dist/",
     "test": "elm-test"
   },
   "devDependencies": {

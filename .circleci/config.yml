@@ -3,7 +3,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:9.8.0
-
     steps:
       - checkout
 
@@ -11,6 +10,11 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
+
+      - restore_cache:
+          keys:
+          - v1-elm-dependencies-{{ checksum "elm-package.json" }}
+          - v1-elm-dependencies-
 
       - restore_cache:
           keys:
@@ -26,7 +30,40 @@ jobs:
 
       - save_cache:
           paths:
+            - elm-stuff
+          key: v1-elm-dependencies-{{ checksum "elm-package.json" }}
+
+      - save_cache:
+          paths:
             - tests/elm-stuff
           key: v1-elm-test-dependencies-{{ checksum "tests/elm-package.json" }}
 
       - run: npm run test
+      - run: npm run build
+
+      - persist_to_workspace:
+          root: ~/
+          paths: ./*
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - attach_workspace:
+          at: ~/
+
+      - run: git config --global user.name "Marei Kikukawa"
+      - run: git config --global user.email "contact@calmery.me"
+      - run: npm run deploy
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+
+          filters:
+            branches:
+              only: master
