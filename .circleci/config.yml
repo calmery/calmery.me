@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:9.8.0
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+
+      - restore_cache:
+          keys:
+          - v1-elm-test-dependencies-{{ checksum "tests/elm-package.json" }}
+          - v1-elm-test-dependencies-
+
+      - run: npm i
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-elm-test-dependencies-{{ checksum "tests/elm-package.json" }}
+
+      - run: npm run test
