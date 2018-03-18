@@ -11,7 +11,7 @@ type alias Profile =
 
 profile : Profile
 profile =
-    Profile "Marei Kikukawa / Calmery" "static/img/icon.jpeg" "Kumamoto, Japan" "Interested in Elm and Web Assembly"
+    Profile "Marei Kikukawa / Calmery" "static/img/icon.jpeg" "Fukuoka, Japan" "Interested in Elm"
 
 
 
