@@ -2,8 +2,9 @@
   "scripts": {
     "watch": "webpack-dev-server --config webpack.config.js",
     "build": "rimraf ./dist/ && webpack",
-    "prettify": "elm-format ./src/elm/ --yes",
-    "deploy": "npm run build && gh-pages -d ./dist/"
+    "prettify": "elm-format ./src/elm/ --yes && elm-format ./tests/ --yes",
+    "deploy": "npm run build && gh-pages -d ./dist/",
+    "test": "elm-test"
   },
   "devDependencies": {
     "babel-minify-webpack-plugin": "^0.2.0",
@@ -11,6 +12,7 @@
     "css-loader": "^0.28.8",
     "elm": "^0.18.0",
     "elm-format": "^0.6.1-alpha",
+    "elm-test": "^0.18.12",
     "elm-webpack-loader": "^4.4.0",
     "gh-pages": "^1.1.0",
     "rimraf": "^2.6.2",
