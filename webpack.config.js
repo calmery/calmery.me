@@ -38,7 +38,8 @@ const frontend = {
     new CopyWebpackPlugin( [
       { from: resolve( './src/index.html' ), to: resolve( './dist/index.html' ) },
       { from: resolve( './src/CNAME' ), to: resolve( './dist/' ) },
-      { from: resolve( './src/static/img' ), to: resolve( './dist/static/img' ) }
+      { from: resolve( './src/static/img' ), to: resolve( './dist/static/img' ) },
+      { from: resolve( './.circleci/config.yml' ), to: resolve( './dist/.circleci/config.yml' ) }
     ] )
   ],
   output: {
