@@ -58,7 +58,7 @@ createMenu menus =
 createBoard : List Repository -> List Article -> Html Msg
 createBoard repositories articles =
     div [ id "board" ]
-        [ div [ class "label" ] [ text "Board" ]
+        [ div [ class "label" ] [ text "" ]
         , div []
             [ createArticle articles
             , createRepository repositories
