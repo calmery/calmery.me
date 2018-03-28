@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:9.8.0
     steps:
@@ -39,6 +39,17 @@ jobs:
           key: v1-elm-test-dependencies-{{ checksum "tests/elm-package.json" }}
 
       - run: npm run test
+
+      - persist_to_workspace:
+          root: ~/
+          paths: ./*
+  build:
+    machine:
+      enabled: true
+    steps:
+      - attach_workspace:
+          at: ~/
+
       - run: npm run build
 
       - persist_to_workspace:
@@ -57,9 +68,19 @@ jobs:
 
 workflows:
   version: 2
-  build-deploy:
+  test-build-deploy:
     jobs:
-      - build
+      - test:
+          filters:
+            branches:
+              only: master
+      - build:
+          requires:
+            - test
+
+          filters:
+            branches:
+              only: master
       - deploy:
           requires:
             - build
