@@ -13,13 +13,11 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-elm-dependencies-{{ checksum "elm-package.json" }}
-          - v1-elm-dependencies-
+          - v1-dependencies-{{ checksum "elm-package.json" }}
 
       - restore_cache:
           keys:
-          - v1-elm-test-dependencies-{{ checksum "tests/elm-package.json" }}
-          - v1-elm-test-dependencies-
+          - v1-dependencies-{{ checksum "tests/elm-package.json" }}
 
       - run: npm i
 
@@ -31,12 +29,12 @@ jobs:
       - save_cache:
           paths:
             - elm-stuff
-          key: v1-elm-dependencies-{{ checksum "elm-package.json" }}
+          key: v1-dependencies-{{ checksum "elm-package.json" }}
 
       - save_cache:
           paths:
             - tests/elm-stuff
-          key: v1-elm-test-dependencies-{{ checksum "tests/elm-package.json" }}
+          key: v1-dependencies-{{ checksum "tests/elm-package.json" }}
 
       - run: npm run test
 
