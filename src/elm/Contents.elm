@@ -27,7 +27,7 @@ type alias Menu =
 
 menus : List Menu
 menus =
-    [ Menu "Portfolio" "portfolio.png" "http://portfolio.calmery.me"
+    [ Menu "Portfolio" "portfolio.png" "https://portfolio.calmery.me"
     , Menu "Twitter" "twitter.png" "https://twitter.com/calmeryme"
     , Menu "Facebook" "facebook.png" "https://fb.me/marei.kikukawa"
     , Menu "GitHub" "github.png" "https://github.com/calmery"
@@ -50,7 +50,7 @@ type alias Repository =
 
 repositories : List Repository
 repositories =
-    [ Repository "calmery" "calmery.me" "My website written in Elm" "https://github.com/calmery/calmery.me"
+    [ Repository "calmery" "Calmery.me" "My website written in Elm" "https://github.com/calmery/calmery.me"
     , Repository "calmery" "Portfolio" "Portfolio" "https://github.com/calmery/Portfolio"
     ]
 
