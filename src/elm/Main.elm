@@ -1,10 +1,12 @@
-module Main exposing (..)
+module Main exposing (init, main, subscriptions)
 
 import Browser exposing (element)
 import Flags exposing (decodeFlags)
 import Model exposing (Model)
+import Msg exposing (Msg)
+import Parts.Qiita exposing (getQiita)
 import Ports exposing (setTitle)
-import Update exposing (Msg, update)
+import Update exposing (update)
 import View exposing (view)
 
 
@@ -22,7 +24,7 @@ init value =
                 Err _ ->
                     ""
     in
-        ( message, setTitle "" )
+    ( Model [], Cmd.batch [ setTitle "Calmery.me" ] )
 
 
 subscriptions : Model -> Sub Msg
