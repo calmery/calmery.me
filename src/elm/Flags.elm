@@ -1,6 +1,6 @@
 module Flags exposing (decodeFlags)
 
-import Json.Decode exposing (Decoder, Error, decodeString, field, string, map)
+import Json.Decode exposing (Decoder, Error, decodeString, field, map, string)
 import Model exposing (Flags)
 
 

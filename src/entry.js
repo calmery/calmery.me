@@ -10,10 +10,12 @@ const flags = JSON.stringify({
 
 const { Elm } = require("./elm/Main.elm");
 
-Elm.Main.init({
+const app = Elm.Main.init({
   node: document.getElementById("elm"),
   flags
 });
+
+app.ports.setTitle.subscribe(title => (document.title = title));
 
 // For tests
 
