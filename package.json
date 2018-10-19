@@ -10,7 +10,6 @@
     "roots": [
       "tests"
     ],
-    "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "tests/elm-stuff"
     ],
