@@ -1,8 +1,8 @@
-module Parts.Utility exposing (flex, flexSpaceBetween, group)
+module Part.Helper exposing (flex, flexSpaceBetween, group)
 
 import Html exposing (Html, div)
 import Html.Attributes exposing (class)
-import Msg exposing (Msg)
+import Update exposing (Msg)
 
 
 flex : List (Html Msg) -> Html Msg

@@ -3,13 +3,11 @@ module View exposing (view)
 import Html exposing (Html, div, text)
 import Html.Attributes exposing (class)
 import Model exposing (Model)
-import Msg exposing (Msg)
-import Parts.Background exposing (background)
-import Parts.Contents exposing (contents)
-import Parts.Header exposing (header)
-import Parts.Menus exposing (menus)
-import Parts.Utility exposing (flex)
-import Profile
+import Update exposing (Msg)
+import Part.Article exposing (viewArticles)
+import Part.Header exposing (viewHeader)
+import Part.Menu exposing (viewMenus)
+import Part.Helper exposing (flex)
 
 
 container : List (Html Msg) -> Html Msg
@@ -20,12 +18,6 @@ container children =
         ]
 
 
-copyright : Html Msg
-copyright =
-    div [ class "copyright" ]
-        [ text "CopyRight 2017-2018 Calmery All Rights Reserved" ]
-
-
 
 -- View
 
@@ -33,12 +25,18 @@ copyright =
 view : Model -> Html Msg
 view model =
     div []
-        [ background
+        [ div [ class "background" ]
+            []
         , container
-            [ header
-            , menus Profile.menus
-            , div [ class "articles" ]
-                [ flex [ contents "Blog" "http://calmery.hatenablog.com" Profile.blog, contents "Qiita" "https://qiita.com/calmery" Profile.qiita ] ]
-            , copyright
+            [ viewHeader
+            , viewMenus
+            , div [ class "contents" ]
+                [ flex
+                    [ viewArticles "Blog" "http://calmery.hatenablog.com" model.blog
+                    , viewArticles "Qiita" "https://qiita.com/calmery" model.qiita
+                    ]
+                ]
+            , div [ class "copyright" ]
+                [ text "CopyRight 2017-2018 Calmery All Rights Reserved" ]
             ]
         ]

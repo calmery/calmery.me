@@ -1,25 +1,15 @@
-module Model exposing (Content, Flags, Menu, Model)
-
-import Parts.Qiita exposing (Qiita)
+module Model exposing (..)
 
 
 type alias Model =
-    { qiita : List Qiita }
-
-
-type alias Flags =
-    { message : String }
-
-
-type alias Content =
-    { title : String
-    , tag : String
-    , date : String
-    , url : String
+    { qiita : List Article
+    , blog : List Article
     }
 
 
-type alias Menu =
-    { name : String
+type alias Article =
+    { title : String
+    , tags : List String
+    , date : String
     , url : String
     }

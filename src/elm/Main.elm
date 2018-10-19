@@ -1,38 +1,25 @@
 module Main exposing (init, main, subscriptions)
 
 import Browser exposing (element)
-import Flags exposing (decodeFlags)
 import Model exposing (Model)
-import Msg exposing (Msg)
-import Parts.Qiita exposing (getQiita)
-import Ports exposing (setTitle)
-import Update exposing (update)
+import Data.Qiita exposing (getQiita)
+import Data.Blog exposing (getBlog)
+import Ports exposing (setTitle, parsedBlog, parsedQiita)
+import Update exposing (Msg(..), update)
 import View exposing (view)
 
 
-init : String -> ( Model, Cmd Msg )
-init value =
-    let
-        decoded =
-            decodeFlags value
-
-        message =
-            case decoded of
-                Ok flags ->
-                    flags.message
-
-                Err _ ->
-                    ""
-    in
-    ( Model [], Cmd.batch [ setTitle "Calmery.me" ] )
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( Model [] [], Cmd.batch [ setTitle "Calmery.me", getQiita, getBlog ] )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.none
+    Sub.batch [ parsedBlog ParsedBlog, parsedQiita ParsedQiita ]
 
 
-main : Program String Model Msg
+main : Program () Model Msg
 main =
     element
         { init = init

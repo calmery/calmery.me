@@ -156,12 +156,12 @@ a {
     }
   }
 
-  .articles {
+  .contents {
     bottom: $margin-48;
     right: 0;
     position: absolute;
 
-    .contents {
+    .articles {
       width: 232px - $margin-16 * 2 - $border-outline-size * 2;
       height: 224px - $margin-16 * 2 - $border-outline-size * 2;
       padding: $margin-16 - $border-outline-size;
@@ -174,7 +174,7 @@ a {
         margin-left: 0;
       }
 
-      .content {
+      .article {
         width: 200px - $margin-16 * 2 - $border-outline-size * 2;
         height: 72px - $margin-16 * 2 - $border-outline-size * 2;
         padding: $margin-16 - $border-outline-size;
