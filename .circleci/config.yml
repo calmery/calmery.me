@@ -1,62 +1,49 @@
 version: 2
-
 jobs:
-  setup:
+  test:
     docker:
-      - image: circleci/node:8.12.0
-
-    working_directory: ~/elm
-
+      - image: circleci/node:9.8.0
     steps:
       - checkout
 
       - restore_cache:
           keys:
-          - elm-0.19-node_modules-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
 
-      - run: npm install
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "elm-package.json" }}
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "tests/elm-package.json" }}
+
+      - run: npm i
 
       - save_cache:
           paths:
             - node_modules
-          key: elm-0.19-node_modules-dependencies-{{ checksum "package.json" }}
-
-      - persist_to_workspace:
-          root: ~/
-          paths: ./*
-
-  test:
-    docker:
-      - image: circleci/node:8.12.0
-
-    working_directory: ~/elm
-
-    steps:
-      - attach_workspace:
-          at: ~/
-
-      - restore_cache:
-          keys:
-          - elm-0.19-dependencies-{{ checksum "elm.json" }}
-
-      - run: npm run test
+          key: v1-dependencies-{{ checksum "package.json" }}
 
       - save_cache:
           paths:
             - elm-stuff
-            - ~/.elm
-          key: elm-0.19-dependencies-{{ checksum "elm.json" }}
+          key: v1-dependencies-{{ checksum "elm-package.json" }}
+
+      - save_cache:
+          paths:
+            - tests/elm-stuff
+          key: v1-dependencies-{{ checksum "tests/elm-package.json" }}
+
+      - run: npm run test
 
       - persist_to_workspace:
           root: ~/
           paths: ./*
-
   build:
-    docker:
-      - image: circleci/node:8.12.0
-
-    working_directory: ~/elm
-
+    machine:
+      enabled: true
     steps:
       - attach_workspace:
           at: ~/
@@ -66,36 +53,32 @@ jobs:
       - persist_to_workspace:
           root: ~/
           paths: ./*
-
   deploy:
-    docker:
-      - image: circleci/node:8.12.0
-
-    working_directory: ~/elm
-
+    machine:
+      enabled: true
     steps:
       - attach_workspace:
           at: ~/
 
       - run: git config --global user.name "Marei Kikukawa"
-      - run: git config --global user.email "contact@marei.jp"
+      - run: git config --global user.email "contact@calmery.me"
       - run: npm run deploy
 
 workflows:
   version: 2
-
-  test-build-and-deploy:
+  test-build-deploy:
     jobs:
-      - setup
-
       - test:
-          requires:
-            - setup
-
+          filters:
+            branches:
+              only: master
       - build:
           requires:
             - test
 
+          filters:
+            branches:
+              only: master
       - deploy:
           requires:
             - build
