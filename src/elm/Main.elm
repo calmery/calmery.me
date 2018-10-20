@@ -1,22 +1,29 @@
-module Main exposing (..)
+module Main exposing (init, main, subscriptions)
 
-import Html exposing (program)
+import Browser exposing (element)
 import Model exposing (Model)
+import Data.Qiita exposing (getQiita)
+import Data.Blog exposing (getBlog)
+import Ports exposing (setTitle, parsedBlog, parsedQiita)
 import Update exposing (Msg(..), update)
 import View exposing (view)
-import Port exposing (setTitle)
 
 
-init : ( Model, Cmd Msg )
-init =
-    ( "", setTitle "Calmery.me" )
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( Model [] [], Cmd.batch [ setTitle "Calmery.me", getQiita, getBlog ] )
 
 
-main : Program Never Model Msg
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.batch [ parsedBlog ParsedBlog, parsedQiita ParsedQiita ]
+
+
+main : Program () Model Msg
 main =
-    program
+    element
         { init = init
         , view = view
         , update = update
-        , subscriptions = always Sub.none
+        , subscriptions = subscriptions
         }
