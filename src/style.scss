@@ -45,6 +45,14 @@ a {
   background-size: cover;
 }
 
+@keyframes fadeIn {
+  to { opacity: 1 }
+}
+
+.fadeIn {
+  animation: .5s fadeIn forwards;
+}
+
 .container {
   width: $width;
   height: $height;
@@ -58,6 +66,8 @@ a {
   border-radius: $border-radius;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
   background: $white;
+  opacity: 0;
+  animation: .5s fadeIn forwards;
 
   .padding {
     width: $width;
@@ -169,6 +179,7 @@ a {
       border-radius: $border-radius;
       background: $light-gray;
       margin-left: $margin-48;
+      opacity: 0;
 
       &:first-child {
         margin-left: 0;
