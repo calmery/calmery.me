@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/f9a44f6c36d9fdd66a1aa9610f1331fdabf5e32c/Global/macOS.gitignore
+### https://raw.github.com/github/gitignore/7792e50daeaa6c07460484704671d1dc9f0045a7/Global/macOS.gitignore
 
 # General
 .DS_Store
@@ -28,50 +28,7 @@ Temporary Items
 .apdisk
 
 
-### https://raw.github.com/github/gitignore/f9a44f6c36d9fdd66a1aa9610f1331fdabf5e32c/Global/Windows.gitignore
-
-# Windows thumbnail cache files
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
-
-# Dump file
-*.stackdump
-
-# Folder config file
-[Dd]esktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-
-### https://raw.github.com/github/gitignore/f9a44f6c36d9fdd66a1aa9610f1331fdabf5e32c/Global/Linux.gitignore
-
-*~
-
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
-
-
-### https://raw.github.com/github/gitignore/f9a44f6c36d9fdd66a1aa9610f1331fdabf5e32c/Node.gitignore
+### https://raw.github.com/github/gitignore/7792e50daeaa6c07460484704671d1dc9f0045a7/Node.gitignore
 
 # Logs
 logs
@@ -132,11 +89,9 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next
 
 
-### https://raw.github.com/github/gitignore/f9a44f6c36d9fdd66a1aa9610f1331fdabf5e32c/Elm.gitignore
+### https://raw.github.com/github/gitignore/7792e50daeaa6c07460484704671d1dc9f0045a7/Elm.gitignore
 
 # elm-package generated files
 elm-stuff
@@ -144,4 +99,4 @@ elm-stuff
 repl-temp-*
 
 
-build/
+dist/
