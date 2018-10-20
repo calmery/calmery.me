@@ -1,54 +1,53 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const WriteFilePlugin = require('write-file-webpack-plugin');
+const path = require( 'path' )
+const webpack = require( 'webpack' )
+const merge = require( 'webpack-merge' )
 
-const mode = (() => {
-  switch (process.env.NODE_ENV) {
-    case "production":
-    case "development":
-      return process.env.NODE_ENV;
-    default:
-      return "development";
-  }
-})();
+const MinifyPlugin = require( 'babel-minify-webpack-plugin' )
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' )
 
-module.exports = {
-  entry: `${__dirname}/src/entry.js`,
-  mode,
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        loader: ["style-loader", "css-loader?url=false", "sass-loader"]
-      },
-      {
-        test: /\.elm$/,
-        exclude: [/elm-stuff/, /node_modules/],
-        use: {
-          loader: "elm-webpack-loader",
-          options: {
-            verbose: true
-          }
-        }
-      }
-    ]
+const resolve = source => path.resolve( __dirname, source )
+
+const entryPath = resolve( 'src/entry.js' )
+
+const common = {
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js']
   },
-  output: {
-    path: `${__dirname}/build/`,
-    filename: "index.js"
+  plugins: [new MinifyPlugin()]
+}
+
+const frontend = {
+  entry: entryPath,
+  module: {
+    rules: [{
+      test: /\.elm$/,
+      exclude: [/elm-stuff/, /node_modules/],
+      use: 'elm-webpack-loader'
+    }, {
+      test: /\.css$/,
+      use: ['style-loader', {
+        loader: 'css-loader',
+        options: {
+          minimize: true
+        }
+      }]
+    }]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: `${__dirname}/src/index.html`,
-      minify: {
-        collapseWhitespace: mode === "production"
-      }
-    }),
-    new CopyWebpackPlugin([
-      { from: `${__dirname}/src/assets`, to: `${__dirname}/build/assets` },
-      { from: `${__dirname}/src/CNAME`, to: `${__dirname}/build` }
-    ]),
-    // src/assets を webpack-dev-server を使用している場合にもコピーするために必要になる
-    new WriteFilePlugin()
-  ]
-};
+    new CopyWebpackPlugin( [
+      { from: resolve( './src/index.html' ), to: resolve( './dist/index.html' ) },
+      { from: resolve( './src/CNAME' ), to: resolve( './dist/' ) },
+      { from: resolve( './src/static/img' ), to: resolve( './dist/static/img' ) },
+      { from: resolve( './.circleci/config.yml' ), to: resolve( './dist/.circleci/config.yml' ) }
+    ] )
+  ],
+  output: {
+    path: resolve( './dist/' ),
+    filename: 'elm.js'
+  }
+}
+
+module.exports = [
+  merge( common, frontend )
+]
