@@ -1,17 +1,15 @@
 module Tests exposing (..)
 
-import Test exposing (..)
-import TestExp exposing (..)
-import Html exposing (div, text)
-
-
---  target modules
+import Test exposing (Test, test, describe)
+import Expect exposing (equal)
+import Tuple exposing (first)
+import Update exposing (Msg(..), update)
 
 
 all : Test
 all =
-    describe "List module Test"
-        [ "Test"
-            => (List.range 1 10 |> List.map (\x -> div [] [ text <| toString x ]) |> List.head)
-            === Just (div [] [ text "1" ])
+    describe "Elm Tests"
+        [ test "Dummy" <|
+            \_ ->
+                Expect.equal True True
         ]
