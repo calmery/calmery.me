@@ -30,7 +30,14 @@ viewArticles name url articles =
                 Nothing ->
                     ""
     in
-        div [ class "articles" ]
+        div
+            [ class <|
+                "articles"
+                    ++ if List.length articles > 0 then
+                        " fadeIn"
+                       else
+                        ""
+            ]
             [ flexSpaceBetween
                 [ text name
                 , a [ href url ]
