@@ -27,7 +27,8 @@ module.exports = {
         use: {
           loader: "elm-webpack-loader",
           options: {
-            verbose: true
+            verbose: true,
+            optimize: mode === 'production'
           }
         }
       }
