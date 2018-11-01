@@ -18,7 +18,7 @@ viewHeader =
         , div [ class "location" ]
             [ flex
                 [ img [ src "assets/location.svg", alt "Location" ] []
-                , text "Internship at CyberAgent, Inc."
+                , text "Fukuoka, Japan"
                 ]
             ]
         , div [ class "line" ]
