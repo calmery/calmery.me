@@ -41,6 +41,6 @@ view model =
                     ]
                 ]
             , div [ class "copyright" ]
-                [ text "CopyRight 2017-2018 Calmery All Rights Reserved" ]
+                [ text "CopyRight 2017-2019 Calmery All Rights Reserved" ]
             ]
         ]

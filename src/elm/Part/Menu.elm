@@ -28,10 +28,10 @@ viewMenus =
                     viewMenu name url
                 )
                 [ ( "Portfolio", "https://portfolio.calmery.me" )
-                , ( "Blog", "http://calmery.hatenablog.com" )
                 , ( "GitHub", "https://github.com/calmery" )
                 , ( "Twitter", "https://twitter.com/calmeryme" )
                 , ( "Facebook", "https://www.facebook.com/marei.kikukawa" )
+                , ( "Blog", "http://calmery.hatenablog.com" )
                 , ( "Qiita", "https://qiita.com/calmery" )
                 ]
             )
