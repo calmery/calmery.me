@@ -10,9 +10,9 @@ viewHeader : Html Msg
 viewHeader =
     div [ class "header" ]
         [ div [ class "name" ]
-            [ text "Calmery - Marei Kikukawa" ]
+            [ text "Marei Kikukawa / Calmery" ]
         , div [ class "description" ]
-            [ text "Software Engineer (Frontend)" ]
+            [ text "Undergraduate / Frontend Engineer (part-time)" ]
         , div [ class "icon", style "background" ("url('assets/profile.jpg')"), style "background-size" "cover" ]
             []
         , div [ class "location" ]
