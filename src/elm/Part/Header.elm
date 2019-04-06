@@ -12,7 +12,7 @@ viewHeader =
         [ div [ class "name" ]
             [ text "Marei Kikukawa / Calmery" ]
         , div [ class "description" ]
-            [ text "Undergraduate / Frontend Engineer (part-time)" ]
+            [ text "Graduate student / Frontend Engineer (part-time)" ]
         , div [ class "icon", style "background" ("url('assets/profile.jpg')"), style "background-size" "cover" ]
             []
         , div [ class "location" ]
