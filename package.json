@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "rimraf dist && webpack",
+    "build": "rimraf build && webpack",
     "deploy": "gh-pages -d build",
     "prettify": "eslint --fix src/ tests/ && elm-format --yes src/elm",
     "serve": "webpack-dev-server --port 3000",
