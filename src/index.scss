@@ -186,6 +186,7 @@ header {
     border-radius: $border-radius;
     padding: $margin-medium - $border-width;
     position: relative;
+    background: $color-white;
 
     &:first-child {
       margin-right: $margin-extra-large;
@@ -264,6 +265,7 @@ nav {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    background: $color-white;
 
     &:hover {
       transition: 0.25s ease;
