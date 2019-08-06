@@ -15,12 +15,10 @@ parseUrl =
 
 type Route
     = Top
-    | Entry String
 
 
 route : Parser (Route -> Route) Route
 route =
     oneOf
         [ map Top top
-        , map Entry (s "entry" </> string)
         ]
