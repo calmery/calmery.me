@@ -100,6 +100,15 @@ main {
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, .12);
+
+  .relative {
+    width: $container-width - $left-and-right-margin * 2;
+    height: $container-height - $top-and-bottom-margin * 2;
+  }
+}
+
+.relative {
+  position: relative;
 }
 
 .absolute {
@@ -108,8 +117,6 @@ main {
 }
 
 header {
-  position: relative;
-
   h1 {
     height: 26px;
     font-size: 24px;
@@ -184,40 +191,10 @@ header {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-
-  #profile {
-    border: $border-width solid $border-color;
-    border-radius: $border-radius;
-    background: $color-white;
-    padding: $margin-medium - $border-width;
-    display: flex;
-
-    img {
-      height: 40px - $border-width * 2 * 2;
-      border: 2px solid $border-color;
-      border-radius: 100%;
-    }
-
-    #self-introduction {
-      margin-left: $margin-small;
-
-      #name {
-        font-family: Quicksand;
-      }
-
-      #description {
-        width: 350px;
-        font-size: 10px;
-        line-height: 11px;
-        margin-top: $margin;
-      }
-    }
-  }
-
   #copyright {
-    display: none;
+    bottom: 0;
+    right: 0;
+    position: absolute;
     font-family: Quicksand;
     font-size: 10px;
     line-height: 10px;

@@ -2,7 +2,7 @@ module View exposing (view)
 
 import Browser exposing (Document)
 import Html exposing (Html, div, node)
-import Html.Attributes exposing (id)
+import Html.Attributes exposing (class, id)
 import Model exposing (Model)
 import Msg exposing (Msg(..))
 import Pages.Top as TopPage
@@ -18,8 +18,11 @@ view model =
             []
             [ div
                 [ id "container" ]
-                [ TopPage.view model
-                , Footer.view model
+                [ div
+                    [ class "relative" ]
+                    [ TopPage.view model
+                    , Footer.view model
+                    ]
                 ]
             ]
         ]
