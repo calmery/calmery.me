@@ -2,9 +2,7 @@ module Main exposing (main)
 
 import Browser exposing (application)
 import Browser.Navigation exposing (Key)
-import Data.Entries.Fetch exposing (fetchEntries)
 import Flags exposing (decodeFlags)
-import Helper exposing (fetchFromUrlPath, isPageUrl)
 import Html exposing (text)
 import Maybe exposing (andThen)
 import Model exposing (Model, initialModel)
@@ -35,7 +33,7 @@ init flags url key =
             updateUrl url
     in
     ( initialModel (decodeFlags flags) key (route |> parseUrl)
-    , Cmd.batch [ fetchFromUrlPath route, fetchEntries ]
+    , Cmd.none
     )
 
 
