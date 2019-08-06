@@ -37,7 +37,7 @@ update msg model =
                     { model | qiita = articles }
 
                 Err e ->
-                    Debug.log ("Error" ++ Debug.toString e ++ response) model
+                    model
             , Cmd.none
             )
 
