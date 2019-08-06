@@ -18,4 +18,4 @@ copyright : Html Msg
 copyright =
     p
         [ id "copyright" ]
-        [ text "CopyRight 2019 Calmery All Rights Reserved" ]
+        [ text "CopyRight 2017-present Calmery All Rights Reserved" ]
