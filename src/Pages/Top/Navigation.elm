@@ -1,7 +1,7 @@
 module Pages.Top.Navigation exposing (view)
 
 import Html exposing (Html, a, div, img, nav, span, text)
-import Html.Attributes exposing (class, href, src)
+import Html.Attributes exposing (alt, class, href, src)
 import Msg exposing (Msg)
 
 
@@ -22,7 +22,7 @@ link name url =
     a [ href url ]
         [ div
             [ class "link" ]
-            [ div [] [ img [ src ("assets/" ++ name ++ ".svg") ] [] ]
+            [ div [] [ img [ src ("assets/" ++ name ++ ".svg"), alt name ] [] ]
             , div [] [ text name ]
             ]
         ]

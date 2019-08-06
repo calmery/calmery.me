@@ -50,7 +50,7 @@ img {
   vertical-align: bottom;
 }
 
-h1, p {
+h1, h2, p {
   padding: 0;
   margin: 0;
 }
@@ -88,22 +88,17 @@ main {
 }
 
 #container {
-  $top-and-bottom-margin: $margin-extra-large + $margin * 3 - $margin;
-  $left-and-right-margin: $margin-extra-large;
-  width: $container-width - $left-and-right-margin * 2;
-  height: $container-height - $top-and-bottom-margin * 2;
-  padding-top: $top-and-bottom-margin - $border-width;
-  padding-bottom: $top-and-bottom-margin - $border-width;
-  padding-left: $left-and-right-margin - $border-width;
-  padding-right: $left-and-right-margin - $border-width;
+  width: $container-width - $margin-extra-large * 2;
+  height: $container-height - $margin-extra-large * 2;
+  padding: $margin-extra-large - $border-width;
   background: radial-gradient(circle at top left, #FFFFFF, #FAFAFA);
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, .12);
 
   .relative {
-    width: $container-width - $left-and-right-margin * 2;
-    height: $container-height - $top-and-bottom-margin * 2;
+    width: $container-width - $margin-extra-large * 2;
+    height: $container-height - $margin-extra-large * 2;
   }
 }
 
@@ -179,6 +174,81 @@ header {
   position: absolute;
   display: flex;
   justify-content: space-between;
+}
+
+#articles {
+  display: flex;
+
+  article {
+    width: 232px - $border-width * 2 - ($margin-medium - $border-width) * 2;
+    height: 260px - $border-width * 2 - ($margin-medium - $border-width) * 2;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+    padding: $margin-medium - $border-width;
+    position: relative;
+
+    &:first-child {
+      margin-right: $margin-extra-large;
+    }
+
+    h2 {
+      font-size: 12px;
+      line-height: 12px;
+      font-family: Quicksand;
+      margin-bottom: $margin-medium;
+    }
+
+    .article {
+      width: 200px - $border-width * 2 - $margin-medium * 2;
+      height: 72px - $border-width * 2 - $margin-medium * 2;
+      border: $border-width solid $border-color;
+      border-radius: $border-radius;
+      margin-bottom: $margin-medium;
+      padding: $margin-medium;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:hover {
+        transition: 0.25s ease;
+        background: $color-gray;
+      }
+
+      .title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-weight: bold;
+      }
+
+      .footer {
+        color: $color-dark-gray;
+        font-family: Quicksand;
+        font-size: 10px;
+        line-height: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .read-more {
+      width: 200px - $border-width * 2;
+      height: 24px - $border-width * 2;
+      border: $border-width solid $border-color;
+      border-radius: $border-radius;
+      font-family: Quicksand;
+      font-size: 10px;
+      line-height: 24px;
+      text-align: center;
+      bottom: $margin-medium - $border-width;
+      position: absolute;
+
+      &:hover {
+        transition: 0.25s ease;
+        background: $color-gray;
+      }
+    }
+  }
 }
 
 nav {
