@@ -3,6 +3,15 @@
 // Fonts
 
 @font-face {
+  font-family: CONDENSEicon;
+  font-display: swap;
+  src: url(assets/fonts/CONDENSEicon.woff2) format('woff2'),
+       url(assets/fonts/CONDENSEicon.woff) format('woff'),
+       url(assets/fonts/CONDENSEicon.ttf) format('truetype');
+}
+
+
+@font-face {
   font-family: Quicksand;
   font-display: swap;
   src: url(assets/fonts/Quicksand.woff2) format('woff2'),
