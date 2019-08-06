@@ -21,7 +21,7 @@ logo =
     h1
         []
         [ img
-            [ src "assets/logo.png", alt "Calmery.moe" ]
+            [ src "assets/logo.png", alt "Calmery.me" ]
             []
         ]
 
