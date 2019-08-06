@@ -174,17 +174,37 @@ header {
 }
 
 #body {
-  margin-left: $margin-large;
-  margin-right: $margin-large;
-  white-space: pre-wrap;
-  height: 14px * 6;
+  width: 100%;
+  top: 184px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
 
-  p {
-    a {
-      text-decoration: underline;
+nav {
+  .link {
+    width: 144px - $border-width * 2 - $margin-medium * 2;
+    height: 32px - $border-width * 2;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+    margin-bottom: $margin-medium;
+    padding: 0 $margin-medium;
+    line-height: 32px - $border-width * 2;
+    font-family: Quicksand;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 
-      &::before {
-        // content: "";
+    &:hover {
+      transition: 0.25s ease;
+      background: $color-gray;
+    }
+
+    div {
+      &:first-child {
+        img {
+          vertical-align: middle;
+        }
       }
     }
   }
