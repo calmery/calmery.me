@@ -11,7 +11,7 @@ import Route exposing (Route(..))
 
 view : Model -> Document Msg
 view model =
-    { title = "Calmery.moe"
+    { title = "Calmery.me"
     , body =
         [ node "main"
             []
