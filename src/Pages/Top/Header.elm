@@ -1,6 +1,6 @@
 module Pages.Top.Header exposing (view)
 
-import Html exposing (Html, a, div, h1, header, img, node, p, span, text)
+import Html exposing (Html, a, div, h1, header, node, p, span, text)
 import Html.Attributes exposing (alt, class, href, id, src)
 import Model exposing (Model)
 import Msg exposing (Msg)
