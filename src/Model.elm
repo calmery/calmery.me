@@ -1,8 +1,7 @@
-module Model exposing (Model, initialModel)
+module Model exposing (Article, Model, initialModel)
 
 import Browser.Navigation exposing (Key)
 import Data.EnvironmentVariables exposing (EnvironmentVariables)
-import Data.Qiita.Model exposing (Qiita)
 import Route exposing (Route)
 
 
@@ -19,5 +18,13 @@ type alias Model =
     { environmentVariables : EnvironmentVariables
     , key : Key
     , route : Maybe Route
-    , qiita : List Qiita
+    , qiita : List Article
+    }
+
+
+type alias Article =
+    { title : String
+    , tags : List String
+    , date : String
+    , url : String
     }

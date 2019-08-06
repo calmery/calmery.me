@@ -1,18 +1,18 @@
 module Data.Qiita.Decoder exposing (decodeQiita)
 
-import Data.Qiita.Model exposing (Qiita)
 import Json.Decode as JD
+import Model exposing (Article)
 import Parser as P exposing ((|.), (|=))
 
 
-decodeQiita : String -> Result JD.Error (List Qiita)
+decodeQiita : String -> Result JD.Error (List Article)
 decodeQiita response =
     JD.decodeString (JD.list qiitaDecoder) response
 
 
-qiitaDecoder : JD.Decoder Qiita
+qiitaDecoder : JD.Decoder Article
 qiitaDecoder =
-    JD.map4 Qiita
+    JD.map4 Article
         (JD.field "title" JD.string)
         (JD.field "tags"
             (JD.list

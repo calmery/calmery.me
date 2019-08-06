@@ -14,8 +14,8 @@ view model =
             [ logo
             , border
             , introduction "-" "Graduate Student / Frontend Engineer (part-time)"
+            , introduction "e" "1997/01/15"
             , introduction "x" "Fukuoka, Japan"
-            , introduction "F" "contact@calmery.me"
             ]
         , profileIcon
         ]
