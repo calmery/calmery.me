@@ -2,6 +2,7 @@ module Main exposing (main)
 
 import Browser exposing (application)
 import Browser.Navigation exposing (Key)
+import Data.Qiita.Fetch exposing (fetchQiita)
 import Flags exposing (decodeFlags)
 import Html exposing (text)
 import Maybe exposing (andThen)
@@ -33,7 +34,7 @@ init flags url key =
             updateUrl url
     in
     ( initialModel (decodeFlags flags) key (route |> parseUrl)
-    , Cmd.none
+    , Cmd.batch [ fetchQiita ]
     )
 
 

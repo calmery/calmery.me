@@ -14,6 +14,6 @@ view model =
         , div
             [ id "body" ]
             [ Navigation.view
-            , Article.view
+            , Article.view model
             ]
         ]
