@@ -13,9 +13,9 @@ view model =
         [ div [ class "absolute" ]
             [ logo
             , border
-            , introduction "-" "Graduate Student / Frontend Engineer (part-time)"
-            , introduction "e" "1997/01/15"
-            , introduction "x" "Fukuoka, Japan"
+            , introduction "-" <| text "Graduate Student / Frontend Engineer (part-time)"
+            , introduction "K" <| a [ class "resume", href "https://github.com/calmery/Resume" ] [ text "Resume" ]
+            , introduction "x" <| text "Fukuoka, Japan"
             ]
         , profileIcon
         ]
@@ -38,12 +38,12 @@ border =
         ]
 
 
-introduction : String -> String -> Html Msg
+introduction : String -> Html Msg -> Html Msg
 introduction icon message =
     p
         []
         [ span [] [ text icon ]
-        , text message
+        , message
         ]
 
 
