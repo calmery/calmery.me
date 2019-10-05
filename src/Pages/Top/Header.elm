@@ -13,9 +13,9 @@ view model =
         [ div [ class "absolute" ]
             [ logo
             , border
-            , introduction "-" <| text "Graduate Student / Frontend Engineer (part-time)"
+            , introduction "-" <| text "Software Engineer, Frontend"
             , introduction "K" <| a [ class "resume", href "https://github.com/calmery/Resume" ] [ text "Resume" ]
-            , introduction "x" <| text "Fukuoka, Japan"
+            , introduction "x" <| text "Tokyo, Japan"
             ]
         , profileIcon
         ]
