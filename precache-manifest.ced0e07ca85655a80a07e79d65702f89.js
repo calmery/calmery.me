@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b582078d7de8c7d98ede",
-    "url": "3029f09305709b7277fb.css"
+    "revision": "24dd1e49fd167c0d5bb5",
+    "url": "01a81eb8afafff507bbb.css"
   },
   {
     "revision": "4e05f0644f3b98161dee1a44408e1163",
@@ -56,18 +56,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/fonts/Quicksand.woff2"
   },
   {
-    "revision": "732d97b553681e3e86d3e368deb160e4",
-    "url": "assets/fonts/SmartFontUI.ttf"
-  },
-  {
-    "revision": "8306dd416d36556c0fb389c03610020b",
-    "url": "assets/fonts/SmartFontUI.woff"
-  },
-  {
-    "revision": "96130586449b1f4ee36241775f18140e",
-    "url": "assets/fonts/SmartFontUI.woff2"
-  },
-  {
     "revision": "28c4ad63b088d67e8771b7efa1c9229c",
     "url": "assets/icon.jpg"
   },
@@ -112,11 +100,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/thumbnail.jpg"
   },
   {
-    "revision": "b582078d7de8c7d98ede",
+    "revision": "24dd1e49fd167c0d5bb5",
     "url": "b112f9b56f3b73b8777f.js"
   },
   {
-    "revision": "6eb1e68e7ec044392281821494038643",
+    "revision": "07489238d989b4a2d719e9cc858d717e",
     "url": "index.html"
   }
 ]);
