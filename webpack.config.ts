@@ -11,7 +11,6 @@ import {
   DefinePlugin
 } from "webpack";
 import merge from "webpack-merge";
-import WorkboxWebpackPlugin from "workbox-webpack-plugin";
 import WriteFileWebpackPlugin from "write-file-webpack-plugin";
 
 const { NODE_ENV } = process.env;
@@ -157,17 +156,6 @@ const production: Configuration = merge(common, {
     }),
     new MiniCssExtractPlugin({
       filename: "[contenthash].css"
-    }),
-    // https://github.com/facebook/create-react-app/blob/caf0a30e38d0cb9bbd2aab733efa0dd1aa6a9cb6/packages/react-scripts/config/webpack.config.js#L609-L621
-    new WorkboxWebpackPlugin.GenerateSW({
-      clientsClaim: true,
-      exclude: [/\.map$/, /CNAME$/],
-      importWorkboxFrom: "cdn",
-      navigateFallback: "/index.html",
-      navigateFallbackBlacklist: [
-        new RegExp("^/_"),
-        new RegExp("/[^/]+\\.[^/]+$")
-      ]
     })
   ]
 });
