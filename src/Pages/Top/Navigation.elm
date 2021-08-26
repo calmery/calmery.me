@@ -9,7 +9,8 @@ view : Html Msg
 view =
     nav
         []
-        [ link "Twitter" "https://twitter.com/calmeryme"
+        [ link "Profile" "https://bit.ly/c41m3ry"
+        , link "Twitter" "https://twitter.com/calmeryme"
         , link "GitHub" "https://github.com/calmery"
         , link "Qiita" "https://qiita.com/calmery"
         , link "Blog" "http://calmery.hatenablog.com"

@@ -15,11 +15,7 @@ view model =
             , border
             , introduction "-" <| text "Software Engineer, Frontend"
             , introduction "K" <|
-                span [ class "description" ]
-                    [ text "I work for pixiv Inc. See my "
-                    , a [ class "resume", href "https://github.com/calmery/Resume" ] [ text "resume" ]
-                    , text "."
-                    ]
+                span [ class "description" ] [ text "pixiv Inc." ]
             , introduction "x" <| text "Tokyo, Japan"
             ]
         , profileIcon
