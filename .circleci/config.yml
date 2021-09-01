@@ -115,8 +115,8 @@ jobs:
       - attach_workspace:
           at: ~/
 
-      - run: git config --global user.name "Marei Kikukawa"
-      - run: git config --global user.email "contact@marei.jp"
+      - run: git config --global user.name "calmery"
+      - run: git config --global user.email "12670155+calmery@users.noreply.github.com"
       - run: npm run deploy
 
 workflows:

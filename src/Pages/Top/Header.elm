@@ -26,7 +26,7 @@ logo : Html Msg
 logo =
     h1
         []
-        [ text "Calmery / Marei Kikukawa"
+        [ text "Calmery"
         ]
 
 
