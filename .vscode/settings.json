@@ -1,0 +1,7 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "files.exclude": {
+    "**/.next/": true,
+    "**/node_modules/": true
+  }
+}
