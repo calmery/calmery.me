@@ -12,8 +12,8 @@ const ContentRenderer: React.FC<Pick<SidebarContent, "contents" | "type">> = ({
     case "emojis":
       return (
         <>
-          {contents.map((icon, index) => (
-            <IconWithBackground key={`${icon}/${index}`} icon={icon} />
+          {contents.map((content, key) => (
+            <IconWithBackground {...content} key={key} />
           ))}
         </>
       );

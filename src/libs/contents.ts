@@ -17,7 +17,10 @@ export interface MainContent {
 
 export type SidebarContent =
   | {
-      contents: ComponentPropsWithoutRef<typeof Icon>["icon"][];
+      contents: {
+        description: string;
+        icon: ComponentPropsWithoutRef<typeof Icon>["icon"];
+      }[];
       direction: "column" | "row";
       heading: ContentHeading;
       type: "emojis";
@@ -54,7 +57,28 @@ export const mainContents: MainContent[] = [
 
 export const sidebarContents: SidebarContent[] = [
   {
-    contents: ["laptop", "camera", "game", "coffee", "doughnut"],
+    contents: [
+      {
+        description: "プログラミング",
+        icon: "laptop",
+      },
+      {
+        description: "写真撮影",
+        icon: "camera",
+      },
+      {
+        description: "ゲーム",
+        icon: "game",
+      },
+      {
+        description: "紅茶",
+        icon: "coffee",
+      },
+      {
+        description: "甘いもの",
+        icon: "doughnut",
+      },
+    ],
     direction: "row",
     heading: {
       icon: "sparkling_heart",
