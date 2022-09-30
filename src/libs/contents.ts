@@ -18,7 +18,6 @@ export interface MainContent {
 export type SidebarContent =
   | {
       contents: {
-        description: string;
         icon: ComponentPropsWithoutRef<typeof Icon>["icon"];
       }[];
       direction: "column" | "row";
@@ -44,23 +43,18 @@ export const sidebarContents: SidebarContent[] = [
   {
     contents: [
       {
-        description: "プログラミング",
         icon: "laptop",
       },
       {
-        description: "写真撮影",
         icon: "camera",
       },
       {
-        description: "ゲーム",
         icon: "game",
       },
       {
-        description: "紅茶",
         icon: "coffee",
       },
       {
-        description: "甘いもの",
         icon: "doughnut",
       },
     ],
