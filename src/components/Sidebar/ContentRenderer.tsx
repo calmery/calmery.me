@@ -39,7 +39,9 @@ export const SidebarContentRenderer: React.FC<SidebarContent> = ({
 }) => {
   return (
     <section className={clsx("flex", "flex-col", "gap-16")}>
-      <Heading icon={heading.icon}>{heading.text}</Heading>
+      <Heading element="h3" icon={heading.icon}>
+        {heading.text}
+      </Heading>
       <div
         className={clsx("flex", "gap-16", {
           "flex-col": direction === "column",
