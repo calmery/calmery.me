@@ -31,6 +31,7 @@ module.exports = {
     },
     colors: {
       border: "rgba(20,20,20,0.16)",
+      emphasis: "#EA596E",
       gradient: {
         blue: "#55ACEE",
         pink: "#EA596E",
