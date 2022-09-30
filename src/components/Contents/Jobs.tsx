@@ -184,14 +184,36 @@ export const Jobs: React.FC = () => {
               にてフロントエンド周りの改善を進めています。
             </OpenableListItemBody>
           </OpenableListItem>
+
+          <OpenableListItem>
+            <OpenableListItemSummary>アルバイト</OpenableListItemSummary>
+            <OpenableListItemBody>
+              <div className={clsx("ml-16")}>
+                <Text primary>
+                  <PartTimeJobs />
+                </Text>
+              </div>
+            </OpenableListItemBody>
+          </OpenableListItem>
+
+          <OpenableListItem>
+            <OpenableListItemSummary>インターンシップ</OpenableListItemSummary>
+            <OpenableListItemBody>
+              <div className={clsx("ml-16")}>
+                <Text primary>
+                  <Internships />
+                </Text>
+              </div>
+            </OpenableListItemBody>
+          </OpenableListItem>
         </List>
       </Text>
 
-      <Heading element="h3">アルバイト</Heading>
+      {/* <Heading element="h3">アルバイト</Heading>
       <PartTimeJobs />
 
       <Heading element="h3">インターンシップ</Heading>
-      <Internships />
+      <Internships /> */}
     </Column>
   );
 };

@@ -37,7 +37,7 @@ export const OpenableListItem: React.FC<{ children: ReactNode }> = ({
 export const OpenableListItemBody: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  return <div className={clsx("my-8", "text-secondary")}>{children}</div>;
+  return <div className={clsx("mt-8", "text-secondary")}>{children}</div>;
 };
 
 export const OpenableListItemSummary: React.FC<
