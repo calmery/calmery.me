@@ -74,21 +74,6 @@ export const sidebarContents: SidebarContent[] = [
   {
     contents: [
       {
-        children: "Notion",
-        href: "https://bit.ly/c41m3ry",
-        icon: "notion",
-      },
-    ],
-    direction: "column",
-    heading: {
-      icon: "link",
-      text: "プロフィール",
-    },
-    type: "links",
-  },
-  {
-    contents: [
-      {
         children: "Twitter",
         href: "https://twitter.com/calmeryme",
         icon: "twitter",
