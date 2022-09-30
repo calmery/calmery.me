@@ -77,7 +77,7 @@ const Sidebar: React.FC = () => {
         </div>
         <p className={clsx("font-bold", "text-16", "text-secondary")}>
           銀髪赤眼の女の子が好き。イラスト SNS
-          の会社でフロントエンドエンジニアしてます。
+          の会社でソフトウェアエンジニアしてます。
         </p>
       </header>
 
