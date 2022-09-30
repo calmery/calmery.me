@@ -43,7 +43,7 @@ jobs:
           path: "**/node_modules"
       - run: "corepack enable npm"
       - run: "npm set-script prepare ''"
-      - run: "npm ci"
+      - run: "npm ci --legacy-peer-deps"
 
 name: "Build and lint"
 
