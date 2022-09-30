@@ -3,6 +3,7 @@ import PhotoGallery from "react-photo-gallery";
 import { Column } from "~/components/Column";
 import { Heading } from "~/components/Heading";
 import { Text } from "~/components/Text";
+import { Icon } from "../Icon";
 
 export const Introduction: React.FC = () => {
   return (
@@ -11,7 +12,8 @@ export const Introduction: React.FC = () => {
         はじめに
       </Heading>
       <Text>
-        Calmery（かるめり）といいます。アニメや漫画など、いわゆるサブカルチャーや創作文化が好きです。よろしくお願いします🙇🏻
+        Calmery（かるめり）といいます。アニメや漫画など、いわゆるサブカルチャーや創作文化が好きです。よろしくお願いします
+        <Icon icon="bow" inline size={14} />
       </Text>
       <Text>
         <div

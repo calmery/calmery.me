@@ -5,6 +5,7 @@ export interface IconProps {
   alt?: string;
   icon:
     | "books"
+    | "bow"
     | "briefcase"
     | "camera"
     | "coffee"

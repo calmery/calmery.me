@@ -168,16 +168,19 @@ export const Jobs: React.FC = () => {
         職歴
       </Heading>
 
-      <Callout>
-        <Text className={clsx("font-bold", "mb-4")}>
+      <div>
+        <Text className={clsx("font-bold", "mb-8")}>
           <Emphasis className={clsx("ml-0")}>2019/10 ~ 現在</Emphasis>
           ピクシブ株式会社 ソフトウェアエンジニア
         </Text>
-        React と Ruby on Rails を用いた pixiv
-        コミックの開発、またフロントエンドを中心とした管理画面の改善、リプレイスを行いました。その後、短い期間ではありますが
-        OJT、pixivFACTORY で Contentful を用いた開発、現在は BOOTH
-        にてフロントエンド周りの改善を進めています。
-      </Callout>
+
+        <Text secondary>
+          React と Ruby on Rails を用いた pixiv
+          コミックの開発、またフロントエンドを中心とした管理画面の改善、リプレイスを行いました。その後、短い期間ではありますが
+          OJT、pixivFACTORY で Contentful を用いた開発、現在は BOOTH
+          にてフロントエンド周りの改善を進めています。
+        </Text>
+      </div>
 
       <Text>
         <List>

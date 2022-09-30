@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { type ComponentProps, type MouseEvent, useCallback } from "react";
 import PhotoGallery from "react-photo-gallery";
-import { Callout } from "~/components/Callout";
 import { Column } from "~/components/Column";
+import { ExternalLink } from "~/components/ExternalLink";
 import { Heading } from "~/components/Heading";
-import { ExternalLink } from "../ExternalLink";
+import { Text } from "~/components/Text";
 
 const photos: (ComponentProps<typeof PhotoGallery>["photos"][number] & {
   "data-url": string;
@@ -53,13 +53,13 @@ export const Projects: React.FC = () => {
       <Heading icon="books" underline>
         開発したもの
       </Heading>
-      <Callout icon="memo">
+      <Text>
         クリックすると詳細ページに遷移します。ここに載せているもの以外、過去に開発したものは
         <ExternalLink href="https://calmery.notion.site/908eff00219045d3a582847476528f70">
           こちら
         </ExternalLink>
         。
-      </Callout>
+      </Text>
       <div
         className={clsx(
           "-m-8",
