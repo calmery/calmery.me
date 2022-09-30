@@ -6,17 +6,24 @@ interface HeadingProps {
   children: string;
   element?: "h1" | "h2" | "h3";
   icon?: IconProps["icon"];
+  underline?: boolean;
 }
 
 export const Heading: React.FC<HeadingProps> = ({
   children,
   element = "h2",
   icon,
+  underline = false,
 }) => {
   const classes = useMemo(
     () =>
-      clsx("font-bold", "text-primary", { "flex gap-4 items-center": !!icon }),
-    [icon]
+      clsx(
+        "font-bold",
+        "text-primary",
+        { "flex gap-4 items-center": !!icon },
+        { "border-b border-border pb-4": underline }
+      ),
+    [icon, underline]
   );
 
   switch (element) {
@@ -30,15 +37,7 @@ export const Heading: React.FC<HeadingProps> = ({
 
     case "h2":
       return (
-        <h2
-          className={clsx(
-            classes,
-            "border-b",
-            "border-border",
-            "pb-4",
-            "text-20"
-          )}
-        >
+        <h2 className={clsx(classes, "text-20")}>
           {icon && <Icon icon={icon} size={24} />}
           {children}
         </h2>
