@@ -10,6 +10,7 @@ export interface IconProps {
     | "doughnut"
     | "game"
     | "github"
+    | "hand"
     | "hash"
     | "instagram"
     | "laptop"
@@ -17,11 +18,18 @@ export interface IconProps {
     | "notion"
     | "palette"
     | "sparkling_heart"
-    | "twitter";
+    | "twitter"
+    | "wave";
+  inline?: boolean;
   size: number;
 }
 
-export const Icon: React.FC<IconProps> = ({ alt = "", icon, size }) => {
+export const Icon: React.FC<IconProps> = ({
+  alt = "",
+  icon,
+  inline = false,
+  size,
+}) => {
   const basePxSize = useMemo(() => {
     if (typeof window === "undefined") {
       return 16;
@@ -40,7 +48,12 @@ export const Icon: React.FC<IconProps> = ({ alt = "", icon, size }) => {
   const rem = useMemo(() => size / basePxSize, [basePxSize, size]);
 
   return (
-    <div style={{ height: `${rem}rem`, width: `${rem}rem` }}>
+    <div
+      className={clsx({
+        "inline-block": inline,
+      })}
+      style={{ height: `${rem}rem`, width: `${rem}rem` }}
+    >
       <img
         alt={alt}
         className={clsx("align-bottom", "h-full", "w-full")}

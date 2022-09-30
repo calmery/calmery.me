@@ -1,9 +1,9 @@
 import clsx from "clsx";
-import { useMemo, useState } from "react";
+import { type ReactNode, useMemo } from "react";
 import { Icon, type IconProps } from "./Icon";
 
 interface HeadingProps {
-  children: string;
+  children: ReactNode;
   element?: "h1" | "h2" | "h3";
   icon?: IconProps["icon"];
   underline?: boolean;
