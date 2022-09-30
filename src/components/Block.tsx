@@ -11,11 +11,18 @@ export const Block: React.FC<{
 
   return (
     <div
-      className={clsx("gap-16", "mobile:flex", "mobile:flex-col", {
-        "desktop:grid": hasMultipleChildren,
-        "desktop:grid-cols-2": hasMultipleChildren && children.length === 2,
-        "desktop:grid-cols-3": hasMultipleChildren && children.length === 3,
-      })}
+      className={clsx(
+        "gap-16",
+        "mobile:flex",
+        "mobile:flex-col",
+        "tablet:!flex",
+        "tablet:!flex-col",
+        {
+          "desktop:grid": hasMultipleChildren,
+          "desktop:grid-cols-2": hasMultipleChildren && children.length === 2,
+          "desktop:grid-cols-3": hasMultipleChildren && children.length === 3,
+        }
+      )}
     >
       {children}
     </div>

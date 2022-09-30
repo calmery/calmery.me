@@ -21,11 +21,18 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        // 768px ~
         desktop: {
-          min: "64rem", // 1024px
+          min: "48rem",
         },
+        // ~ 743px
         mobile: {
-          max: "63.9375rem", // 1023px
+          max: "47.9375rem",
+        },
+        // 744px ~ 1023px
+        tablet: {
+          max: "63.9375rem",
+          min: "48rem",
         },
       },
     },
