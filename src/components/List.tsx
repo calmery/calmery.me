@@ -42,6 +42,6 @@ export const OpenableListItemBody: React.FC<{ children: ReactNode }> = ({
 
 export const OpenableListItemSummary: React.FC<
   DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
-> = (props) => {
-  return <summary {...props} />;
+> = ({ className, ...props }) => {
+  return <summary {...props} className={clsx("cursor-pointer", className)} />;
 };

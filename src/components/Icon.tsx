@@ -4,6 +4,7 @@ import { useMemo } from "react";
 export interface IconProps {
   alt?: string;
   icon:
+    | "briefcase"
     | "camera"
     | "coffee"
     | "doughnut"
