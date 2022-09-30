@@ -30,7 +30,15 @@ export const Heading: React.FC<HeadingProps> = ({
 
     case "h2":
       return (
-        <h2 className={clsx(classes, "text-24")}>
+        <h2
+          className={clsx(
+            classes,
+            "border-b",
+            "border-border",
+            "pb-4",
+            "text-20"
+          )}
+        >
           {icon && <Icon icon={icon} size={24} />}
           {children}
         </h2>

@@ -10,7 +10,7 @@ export const Callout: React.FC<{
     <div
       className={clsx(
         "border",
-        "border-secondary",
+        "border-border",
         "flex",
         "gap-8",
         "p-8",

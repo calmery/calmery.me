@@ -9,7 +9,7 @@ module.exports = {
         {
           ".text-14": { "font-size": "0.875rem", "line-height": "1.125rem" },
           ".text-16": { "font-size": "1rem", "line-height": "1.25rem" },
-          ".text-24": { "font-size": "1.5rem", "line-height": "1.75rem" },
+          ".text-20": { "font-size": "1.25rem", "line-height": "1.5rem" },
           ".text-40": { "font-size": "2.5rem", "line-height": "2.75rem" },
         },
         {
@@ -30,6 +30,7 @@ module.exports = {
       },
     },
     colors: {
+      border: "rgba(20,20,20,0.16)",
       gradient: {
         blue: "#55ACEE",
         pink: "#EA596E",
