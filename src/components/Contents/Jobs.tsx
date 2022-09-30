@@ -9,6 +9,7 @@ import {
   OpenableListItemBody,
 } from "~/components/List";
 import { Text } from "~/components/Text";
+import { Callout } from "../Callout";
 
 // Components
 
@@ -167,24 +168,19 @@ export const Jobs: React.FC = () => {
         職歴
       </Heading>
 
+      <Callout>
+        <Text className={clsx("font-bold", "mb-4")}>
+          <Emphasis className={clsx("ml-0")}>2019/10 ~ 現在</Emphasis>
+          ピクシブ株式会社 ソフトウェアエンジニア
+        </Text>
+        React と Ruby on Rails を用いた pixiv
+        コミックの開発、またフロントエンドを中心とした管理画面の改善、リプレイスを行いました。その後、短い期間ではありますが
+        OJT、pixivFACTORY で Contentful を用いた開発、現在は BOOTH
+        にてフロントエンド周りの改善を進めています。
+      </Callout>
+
       <Text>
         <List>
-          <OpenableListItem>
-            <OpenableListItemSummary>
-              <Emphasis>2019/10 ~ 現在</Emphasis>
-              ピクシブ株式会社
-            </OpenableListItemSummary>
-            <OpenableListItemBody>
-              <Text className={clsx("font-bold")}>
-                クリエイター事業部 BOOTH 部ソフトウェアエンジニア
-              </Text>
-              React と Ruby on Rails を用いた pixiv
-              コミックの開発、またフロントエンドを中心とした管理画面の改善、リプレイスを行いました。その後、短い期間ではありますが
-              OJT、pixivFACTORY で Contentful を用いた開発、現在は BOOTH
-              にてフロントエンド周りの改善を進めています。
-            </OpenableListItemBody>
-          </OpenableListItem>
-
           <OpenableListItem>
             <OpenableListItemSummary>アルバイト</OpenableListItemSummary>
             <OpenableListItemBody>

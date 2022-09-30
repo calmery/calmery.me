@@ -1,10 +1,11 @@
 import clsx from "clsx";
+import type { ReactNode } from "react";
 import { Icon, type IconProps } from "~/components/Icon";
 import { Text } from "~/components/Text";
 
 export const Callout: React.FC<{
-  children: string;
-  icon: IconProps["icon"];
+  children: ReactNode;
+  icon?: IconProps["icon"];
 }> = ({ children, icon }) => {
   return (
     <div
@@ -17,9 +18,11 @@ export const Callout: React.FC<{
         "rounded"
       )}
     >
-      <div className={clsx("flex-shrink-0")}>
-        <Icon icon={icon} size={18} />
-      </div>
+      {icon && (
+        <div className={clsx("flex-shrink-0")}>
+          <Icon icon={icon} size={18} />
+        </div>
+      )}
       <Text secondary>{children}</Text>
     </div>
   );
