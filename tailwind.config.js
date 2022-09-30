@@ -22,10 +22,10 @@ module.exports = {
     extend: {
       screens: {
         desktop: {
-          min: "46.5rem",
+          min: "64rem", // 1024px
         },
         mobile: {
-          max: "46.4375rem",
+          max: "63.9375rem", // 1023px
         },
       },
     },
