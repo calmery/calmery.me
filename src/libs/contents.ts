@@ -93,31 +93,6 @@ export const sidebarContents: SidebarContent[] = [
   {
     contents: [
       {
-        children: "Calmery.moe",
-        href: "https://calmery.moe",
-        icon: "sparkling_heart",
-      },
-      {
-        children: "かるめりちゃんカメラ",
-        href: "https://camera.calmery.moe",
-        icon: "camera",
-      },
-      {
-        children: "めたねのあーと",
-        href: "https://metaneno.art",
-        icon: "palette",
-      },
-    ],
-    direction: "column",
-    heading: {
-      icon: "link",
-      text: "作ったもの",
-    },
-    type: "links",
-  },
-  {
-    contents: [
-      {
         children: "Qiita",
         href: "https://qiita.com/calmery",
         icon: "link",
