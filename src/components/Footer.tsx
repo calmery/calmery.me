@@ -1,10 +1,7 @@
 import clsx from "clsx";
-import { useUser } from "../hooks/useUser";
 import { Icon } from "./Icon";
 
 export const Footer: React.FC = () => {
-  const { name } = useUser();
-
   return (
     <footer
       className={clsx(
@@ -20,7 +17,7 @@ export const Footer: React.FC = () => {
         "to-gradient-blue"
       )}
     >
-      Made with <Icon icon="sparkling_heart" size={16} /> by {name}
+      Made with <Icon icon="sparkling_heart" size={16} /> by Calmery
     </footer>
   );
 };

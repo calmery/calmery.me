@@ -1,18 +1,16 @@
 import clsx from "clsx";
-import { useUser } from "../hooks/useUser";
+import { sidebarContents } from "../libs/contents";
 import { SidebarContentRenderer } from "./Sidebar/ContentRenderer";
 
 export const Sidebar: React.FC = () => {
-  const { contents, description, iconUrl, name } = useUser();
-
   return (
     <div className={clsx("flex", "flex-col", "gap-32")}>
       <header className={clsx("flex", "flex-col", "gap-16")}>
         <div className={clsx("flex", "gap-16")}>
           <img
-            alt={name}
+            alt=""
             className={clsx("h-[3.25rem]", "rounded", "w-[3.25rem]")}
-            src={iconUrl}
+            src="/icon.webp"
           />
           <h1
             className={clsx(
@@ -27,15 +25,16 @@ export const Sidebar: React.FC = () => {
               "w-fit"
             )}
           >
-            {name}
+            Calmery
           </h1>
         </div>
         <p className={clsx("font-bold", "text-16", "text-secondary")}>
-          {description}
+          銀髪赤眼の女の子が好き。イラスト SNS
+          の会社でフロントエンドエンジニアしてます。
         </p>
       </header>
 
-      {contents.sidebar.map((props, key) => (
+      {sidebarContents.map((props, key) => (
         <SidebarContentRenderer {...props} key={key} />
       ))}
     </div>

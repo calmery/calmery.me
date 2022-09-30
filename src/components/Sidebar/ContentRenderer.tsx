@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { SidebarContent } from "../../hooks/useUser";
+import type { SidebarContent } from "../../libs/contents";
 import { Heading } from "../Heading";
 import { IconWithBackground } from "../IconWithBackground";
 import { SidebarLink } from "./Link";

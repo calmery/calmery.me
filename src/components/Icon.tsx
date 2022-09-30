@@ -4,13 +4,17 @@ import { useMemo } from "react";
 export interface IconProps {
   alt?: string;
   icon:
-    | "bouquet"
     | "camera"
     | "coffee"
     | "doughnut"
+    | "game"
+    | "github"
     | "hash"
     | "instagram"
+    | "laptop"
     | "link"
+    | "notion"
+    | "palette"
     | "sparkling_heart"
     | "twitter";
   size: number;

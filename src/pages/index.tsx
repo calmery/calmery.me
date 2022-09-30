@@ -3,17 +3,14 @@ import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Main } from "../components/Main";
 import { Sidebar } from "../components/Sidebar";
-import { useUser } from "../hooks/useUser";
 
 const Index: React.FC = () => {
-  const { name, username } = useUser();
-
   return (
     <>
       <Head>
-        <title>{name}┊k1y0x0.com</title>
+        <title>Calmery.me</title>
         <meta
-          content={`${name}（@${username}）のプロフィールページです`}
+          content={`Calmery（@calmeryme）のプロフィールページです`}
           name="description"
         />
       </Head>
