@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ReactNode } from "react";
+import type { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
 
 export const List: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
@@ -22,4 +22,26 @@ export const ListItem: React.FC<{ children: ReactNode }> = ({ children }) => {
       <div>{children}</div>
     </li>
   );
+};
+
+export const OpenableListItem: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  return (
+    <li>
+      <details>{children}</details>
+    </li>
+  );
+};
+
+export const OpenableListItemBody: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  return <div className={clsx("my-8", "text-secondary")}>{children}</div>;
+};
+
+export const OpenableListItemSummary: React.FC<
+  DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
+> = (props) => {
+  return <summary {...props} />;
 };
