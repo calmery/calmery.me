@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Head from "next/head";
 import { Block } from "~/components/Block";
 import { Greeting } from "~/components/Contents/Greeting";
 import { Introduction } from "~/components/Contents/Introduction";

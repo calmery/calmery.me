@@ -9,7 +9,6 @@ import {
   OpenableListItemBody,
 } from "~/components/List";
 import { Text } from "~/components/Text";
-import { Callout } from "../Callout";
 
 // Components
 
