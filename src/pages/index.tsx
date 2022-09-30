@@ -1,11 +1,15 @@
 import clsx from "clsx";
 import Head from "next/head";
-import { Column } from "~/components/Column";
-import { Heading } from "~/components/Heading";
+import { Block } from "~/components/Block";
+import { Greeting } from "~/components/Contents/Greeting";
+import { Introduction } from "~/components/Contents/Introduction";
+import { Jobs } from "~/components/Contents/Jobs";
 import { Icon } from "~/components/Icon";
 import { SidebarContentRenderer } from "~/components/Sidebar/ContentRenderer";
-import { Text } from "~/components/Text";
 import { sidebarContents } from "~/libs/contents";
+import { Projects } from "~/components/Contents/Projects";
+import { Contributions } from "~/components/Contents/Contributions";
+import { Development } from "~/components/Contents/Development";
 
 // Components
 
@@ -33,15 +37,14 @@ const Footer: React.FC = () => {
 const Main: React.FC = () => {
   return (
     <main className={clsx("flex", "flex-col", "gap-32")}>
-      <Column>
-        <Heading icon="camera">はじめに</Heading>
-        <Heading element="h3" icon="camera">
-          はじめに
-        </Heading>
-        <Text>
-          Calmery（かるめり）といいます。アニメや漫画など、いわゆるサブカルチャーや創作文化が好きです。よろしくお願いします🙇🏻
-        </Text>
-      </Column>
+      <Greeting />
+      <Introduction />
+      <Projects />
+      <Development />
+      <Block>
+        <Jobs />
+        <Contributions />
+      </Block>
     </main>
   );
 };

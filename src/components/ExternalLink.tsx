@@ -1,13 +1,14 @@
 import clsx from "clsx";
-import React from "react";
+import type { ReactNode } from "react";
 
 export const ExternalLink: React.FC<{
-  children: string;
+  children: ReactNode;
+  className?: string;
   href: string;
-}> = ({ children, href }) => {
+}> = ({ children, className, href }) => {
   return (
     <a
-      className={clsx("underline")}
+      className={clsx("underline", className)}
       href={href}
       rel="noopener noreferrer"
       target="_blank"

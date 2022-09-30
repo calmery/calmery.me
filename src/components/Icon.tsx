@@ -4,6 +4,7 @@ import { useMemo } from "react";
 export interface IconProps {
   alt?: string;
   icon:
+    | "+1"
     | "books"
     | "bow"
     | "briefcase"
@@ -21,7 +22,9 @@ export interface IconProps {
     | "notion"
     | "palette"
     | "sparkling_heart"
+    | "technologist"
     | "twitter"
+    | "warning"
     | "wave";
   inline?: boolean;
   size: number;
