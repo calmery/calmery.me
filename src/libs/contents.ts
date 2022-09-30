@@ -38,22 +38,7 @@ export type SidebarContent =
 
 // Contents
 
-export const mainContents: MainContent[] = [
-  {
-    contents: [
-      { alt: "Cafe", height: 640, src: `/photos/cafe/0.webp`, width: 1024 },
-      { alt: "Cafe", height: 576, src: `/photos/cafe/1.webp`, width: 1024 },
-      { alt: "Cafe", height: 576, src: `/photos/cafe/2.webp`, width: 1024 },
-      { alt: "Cafe", height: 675, src: `/photos/cafe/3.webp`, width: 1024 },
-      { alt: "Cafe", height: 768, src: `/photos/cafe/4.webp`, width: 1024 },
-    ],
-    heading: {
-      icon: "hash",
-      text: "Cafe",
-    },
-    type: "gallery",
-  },
-];
+export const mainContents: MainContent[] = [];
 
 export const sidebarContents: SidebarContent[] = [
   {
