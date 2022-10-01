@@ -44,6 +44,7 @@ const Sidebar: React.FC = () => {
           <img
             alt=""
             className={clsx("h-[3.25rem]", "rounded", "w-[3.25rem]")}
+            loading="lazy"
             src="/icon.webp"
           />
           <h1

@@ -63,6 +63,7 @@ export const Icon: React.FC<IconProps> = ({
       <img
         alt={alt}
         className={clsx("align-bottom", "h-full", "w-full")}
+        loading="lazy"
         src={`/icons/${icon}.svg`}
       />
     </div>
