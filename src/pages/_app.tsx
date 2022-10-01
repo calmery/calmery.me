@@ -8,6 +8,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <link href="/favicon.ico" rel="icon" />
 
+        <meta name="description" content="Calmeryのプロフィールページです。" />
         <meta
           name="format-detection"
           content="address=no, email=no, telephone=no"
@@ -44,6 +45,8 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta property="profile:last_name" content="Watanabe" />
         <meta property="profile:gender" content="male" />
         <meta property="profile:username" content="Calmery" />
+
+        <title>Calmery.me</title>
       </Head>
       <Component {...pageProps} />
     </>
