@@ -124,7 +124,7 @@ const Sidebar: React.FC = () => {
 
 const Index: React.FC = () => {
   return (
-    <div className={clsx("container", "mx-auto", "select-none")}>
+    <div className={clsx("container", "mx-auto")}>
       <div
         className={clsx(
           "flex",

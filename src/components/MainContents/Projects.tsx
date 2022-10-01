@@ -58,11 +58,11 @@ export const Projects: React.FC = () => {
         開発したもの
       </Heading>
       <Text>
-        クリックすると詳細ページに遷移します。ここに載せているもの以外、過去に開発したものは
+        画像をクリックすると詳細ページ（Notion）に遷移します。ここに載せているもの以外、過去に開発したものは
         <ExternalLink href="https://calmery.notion.site/908eff00219045d3a582847476528f70">
           こちら
         </ExternalLink>
-        。
+        から確認できます。
       </Text>
       <div
         className={clsx(

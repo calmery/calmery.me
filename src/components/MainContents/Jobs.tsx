@@ -9,6 +9,7 @@ import {
   OpenableListItemBody,
 } from "~/components/List";
 import { Text } from "~/components/Text";
+import { ExternalLink } from "../ExternalLink";
 
 // Components
 
@@ -23,9 +24,10 @@ const Internships: React.FC = () => {
           </OpenableListItemSummary>
           <OpenableListItemBody>
             <Text className={clsx("font-bold")}>CA Tech JOB</Text>
-            React を用いて REQU のブラウザ版の開発を行いました。また、Atomic
-            Design に従い Storybook や Enzyme を用いた React
-            コンポーネントのテストを整備した上で Renovate の導入を行いました。
+            React を用いてブラウザ版 REQU の開発を行いました。期間中、Atomic
+            Design に則ったコンポーネントの実装だったり、Storybook や Enzyme
+            を用いた React コンポーネントのテストを整備、Renovate
+            の導入を行いました。
           </OpenableListItemBody>
         </OpenableListItem>
 
@@ -65,7 +67,7 @@ const Internships: React.FC = () => {
               pixiv SPRING BOOT CAMP 2018
             </Text>
             PHP を用いた pixiv
-            の開発とフォロー新着作品ページのデザイン改修、提案を行いました。
+            の開発と、デザイナーの方と連携してフォロー新着作品ページのデザイン改修、提案を行いました。
           </OpenableListItemBody>
         </OpenableListItem>
 
@@ -78,9 +80,10 @@ const Internships: React.FC = () => {
             <Text className={clsx("font-bold")}>
               5day サービス開発インターンシップ
             </Text>
-            クックパッドの既存のページを変更することなく、料理工程の情報をスクレイピングで取得し、料理工程ごとにわかりやすく分けて表示する
-            Web アプリを開発しました。その後、Apache Cordova
-            を用いてアプリ化まで行いました。
+            料理工程の情報をスクレイピングで取得、工程毎にわかりやすく分けて表示する
+            Web
+            アプリを開発しました。スマートフォンで動くアプリという要件だったので、Apache
+            Cordova を用いてアプリ化、URL スキームへの対応まで行いました。
           </OpenableListItemBody>
         </OpenableListItem>
 
@@ -124,12 +127,18 @@ const PartTimeJobs: React.FC = () => {
             ピクシブ株式会社
           </OpenableListItemSummary>
           <OpenableListItemBody>
-            主に pixiv chatstory の Ionic を用いたブラウザ版と、Expo と React
-            Native を用いた iOS 版の開発を行いました。Expo と React Native
-            を用いた iOS 版の開発では、ページ単位で実装を行いつつ、Jest
+            主に pixiv chatstory の開発に携わっており、Ionic Framework
+            を用いたブラウザ版と、Expo と React Native を用いた iOS
+            版の開発を行なっていました。Expo と React Native
+            を用いた開発では、ページ単位で実装を行いつつ、Jest
             を用いたテストの整備や Renovate の導入、User Timing API
-            を用いたパフォーマンスチューニングも行っています。また、他に短い期間ではありますが
-            React を用いた pixivFANBOX の開発も行いました。
+            を用いたパフォーマンスチューニングも行っています（
+            <ExternalLink href="https://inside.pixiv.blog/tawachan/6254">
+              pixiv chatstoryのiOSアプリをReact
+              Native（Expo）でリニューアルしました！
+            </ExternalLink>
+            ）その他、短い期間ではありますが React を用いた pixivFANBOX
+            の開発も行いました。
           </OpenableListItemBody>
         </OpenableListItem>
 
@@ -174,10 +183,19 @@ export const Jobs: React.FC = () => {
         </Text>
 
         <Text secondary>
-          React と Ruby on Rails を用いた pixiv
-          コミックの開発、またフロントエンドを中心とした管理画面の改善、リプレイスを行いました。その後、短い期間ではありますが
-          OJT、pixivFACTORY で Contentful を用いた開発、現在は BOOTH
-          にてフロントエンド周りの改善を進めています。
+          現在は BOOTH にて主にフロントエンドの開発に携わっています。
+          <br />
+          その中で、Slim + jQuery を React + TypeScript
+          へ移行したり、社内で開発されているデザインシステムである{" "}
+          <ExternalLink href="https://pixiv.github.io/charcoal/docs/#/">
+            Charcoal
+          </ExternalLink>{" "}
+          の BOOTH
+          への適用を進めたり、その他、フロントエンドのパフォーマンスチューニングや開発環境の整備などを行なっています。
+          <br />
+          以前は React と Ruby on Rails を用いた pixiv
+          コミックの開発や、pixivFACTORY で Contentful
+          を用いた開発を行なっていました。
         </Text>
       </div>
 

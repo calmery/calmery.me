@@ -21,6 +21,7 @@ export interface IconProps {
     | "memo"
     | "notion"
     | "palette"
+    | "sob"
     | "sparkling_heart"
     | "technologist"
     | "twitter"
