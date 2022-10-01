@@ -4,7 +4,6 @@ import { Column } from "~/components/Column";
 import { ExternalLink } from "~/components/ExternalLink";
 import { Heading } from "~/components/Heading";
 import { Text } from "~/components/Text";
-import { Block } from "../Block";
 
 export const Engineering: React.FC = () => {
   return (
@@ -46,16 +45,16 @@ export const Engineering: React.FC = () => {
       <Text>
         バックエンドに関しては、フロントエンドの開発をメインに進めつつ、機能追加や改善で必要な場合は
         Ruby on Rails
-        で開発されているプロダクトの実装や変更を行うという動きを業務で 1
+        で開発されているプロダクトに対して変更を適用するという動きを業務で 1
         年程行っていました。形として実装はできますが、設計やコードの良し悪しには全く自信がない状態なので、コードレビューの環境が必須です。ちなみに
         Ruby on Rails 以外では、趣味開発で Node.js（Express +
         Prisma、NestJS）を用いた経験はありますが、その他の、例えば Go
-        言語などを用いた開発の経験はありません。
+        言語などを用いた開発経験はありません。
       </Text>
 
       <Text>
-        PC やスマートフォンのアプリ開発に関しては、Electron や Ionic
-        Framework、React Native（Expo）の業務での開発経験があります。Kotlin や
+        PC やスマートフォンのアプリ開発に関しては、業務で Electron や Ionic
+        Framework、React Native（Expo）を用いて開発した経験があります。Kotlin や
         Swift
         を用いて開発をした経験はありません。また、インフラ周りは何もわかりません。
       </Text>
