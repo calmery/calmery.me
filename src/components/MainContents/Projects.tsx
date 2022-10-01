@@ -6,7 +6,9 @@ import { ExternalLink } from "~/components/ExternalLink";
 import { Heading } from "~/components/Heading";
 import { Text } from "~/components/Text";
 
-const photos: (ComponentProps<typeof PhotoGallery>["photos"][number] & {
+// Constants
+
+const PHOTOS: (ComponentProps<typeof PhotoGallery>["photos"][number] & {
   "data-url": string;
 })[] = [
   {
@@ -39,6 +41,8 @@ const photos: (ComponentProps<typeof PhotoGallery>["photos"][number] & {
   },
 ];
 
+// Main
+
 export const Projects: React.FC = () => {
   const handleClickPhoto = useCallback((event: MouseEvent) => {
     window.open(
@@ -69,7 +73,7 @@ export const Projects: React.FC = () => {
           "[&>*_img]:cursor-pointer"
         )}
       >
-        <PhotoGallery margin={8} onClick={handleClickPhoto} photos={photos} />
+        <PhotoGallery margin={8} onClick={handleClickPhoto} photos={PHOTOS} />
       </div>
     </Column>
   );

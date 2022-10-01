@@ -206,12 +206,6 @@ export const Jobs: React.FC = () => {
           </OpenableListItem>
         </List>
       </Text>
-
-      {/* <Heading element="h3">アルバイト</Heading>
-      <PartTimeJobs />
-
-      <Heading element="h3">インターンシップ</Heading>
-      <Internships /> */}
     </Column>
   );
 };

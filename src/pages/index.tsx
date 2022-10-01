@@ -1,14 +1,9 @@
 import clsx from "clsx";
-import { Block } from "~/components/Block";
-import { Greeting } from "~/components/Contents/Greeting";
-import { Introduction } from "~/components/Contents/Introduction";
-import { Jobs } from "~/components/Contents/Jobs";
+import { Heading } from "~/components/Heading";
 import { Icon } from "~/components/Icon";
-import { SidebarContentRenderer } from "~/components/Sidebar/ContentRenderer";
-import { sidebarContents } from "~/libs/contents";
-import { Projects } from "~/components/Contents/Projects";
-import { Contributions } from "~/components/Contents/Contributions";
-import { Development } from "~/components/Contents/Development";
+import { IconWithBackground } from "~/components/IconWithBackground";
+import { LinkWithIcon } from "~/components/LinkWithIcon";
+import { MainContents } from "~/components/MainContents";
 
 // Components
 
@@ -36,14 +31,7 @@ const Footer: React.FC = () => {
 const Main: React.FC = () => {
   return (
     <main className={clsx("flex", "flex-col", "gap-32")}>
-      <Greeting />
-      <Introduction />
-      <Projects />
-      <Development />
-      <Block>
-        <Jobs />
-        <Contributions />
-      </Block>
+      <MainContents />
     </main>
   );
 };
@@ -80,9 +68,53 @@ const Sidebar: React.FC = () => {
         </p>
       </header>
 
-      {sidebarContents.map((props, key) => (
-        <SidebarContentRenderer {...props} key={key} />
-      ))}
+      <section className={clsx("flex", "flex-col", "gap-16")}>
+        <Heading element="h3" icon="sparkling_heart">
+          好きなもの
+        </Heading>
+        <div className={clsx("flex", "gap-16", "flex-row")}>
+          <IconWithBackground icon="laptop" />
+          <IconWithBackground icon="camera" />
+          <IconWithBackground icon="game" />
+          <IconWithBackground icon="coffee" />
+          <IconWithBackground icon="doughnut" />
+        </div>
+      </section>
+
+      <section className={clsx("flex", "flex-col", "gap-16")}>
+        <Heading element="h3" icon="link">
+          SNS
+        </Heading>
+        <div className={clsx("flex", "gap-16", "flex-col")}>
+          <nav className={clsx("flex", "flex-col", "gap-16")}>
+            <LinkWithIcon href="https://twitter.com/calmeryme" icon="twitter">
+              Twitter
+            </LinkWithIcon>
+            <LinkWithIcon href="https://github.com/calmery" icon="github">
+              GitHub
+            </LinkWithIcon>
+            <LinkWithIcon href="https://instagr.am/c41m3ry" icon="instagram">
+              Instagram
+            </LinkWithIcon>
+          </nav>
+        </div>
+      </section>
+
+      <section className={clsx("flex", "flex-col", "gap-16")}>
+        <Heading element="h3" icon="link">
+          SNS
+        </Heading>
+        <div className={clsx("flex", "gap-16", "flex-col")}>
+          <nav className={clsx("flex", "flex-col", "gap-16")}>
+            <LinkWithIcon href="https://qiita.com/calmery" icon="link">
+              Qiita
+            </LinkWithIcon>
+            <LinkWithIcon href="https://calmery.hatenablog.com" icon="link">
+              はてなブログ
+            </LinkWithIcon>
+          </nav>
+        </div>
+      </section>
     </div>
   );
 };
@@ -101,6 +133,7 @@ const Index: React.FC = () => {
           "mobile:gap-32"
         )}
       >
+        {/* Sidebar */}
         <div
           className={clsx("desktop:h-fit", "desktop:sticky", "desktop:top-0")}
         >
@@ -120,9 +153,13 @@ const Index: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Main */}
         <div className={clsx("my-48", "w-full", "mobile:my-0")}>
           <Main />
         </div>
+
+        {/* Footer */}
         <div className={clsx("desktop:hidden", "mobile:mb-48")}>
           <Footer />
         </div>

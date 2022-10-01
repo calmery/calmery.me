@@ -11,10 +11,12 @@ export const Introduction: React.FC = () => {
       <Heading icon="hand" underline>
         はじめに
       </Heading>
+
       <Text>
         Calmery（かるめり）といいます。アニメや漫画など、いわゆるサブカルチャーや創作文化が好きです。よろしくお願いします
         <Icon icon="bow" inline size={14} />
       </Text>
+
       <Text>
         <div
           className={clsx(

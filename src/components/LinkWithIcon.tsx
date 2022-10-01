@@ -1,15 +1,15 @@
 import clsx from "clsx";
 import Link from "next/link";
-import type { IconProps } from "../Icon";
-import { IconWithBackground } from "../IconWithBackground";
+import type { IconProps } from "./Icon";
+import { IconWithBackground } from "./IconWithBackground";
 
-interface SidebarLinkProps {
+interface LinkWithIconProps {
   children: string;
   href: string;
   icon: IconProps["icon"];
 }
 
-export const SidebarLink: React.FC<SidebarLinkProps> = ({
+export const LinkWithIcon: React.FC<LinkWithIconProps> = ({
   children,
   href,
   icon,
