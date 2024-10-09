@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Tooltip } from "react-tooltip";
 import { Heading } from "~/components/Heading";
 import { Icon } from "~/components/Icon";
 import { IconWithBackground } from "~/components/IconWithBackground";
@@ -74,11 +75,23 @@ const Sidebar: React.FC = () => {
           好きなもの
         </Heading>
         <div className={clsx("flex", "gap-16", "flex-row")}>
-          <IconWithBackground icon="laptop" />
-          <IconWithBackground icon="camera" />
-          <IconWithBackground icon="game" />
-          <IconWithBackground icon="coffee" />
-          <IconWithBackground icon="doughnut" />
+          <Tooltip id="like" />
+
+          <div data-tooltip-content="PC" data-tooltip-id="like">
+            <IconWithBackground icon="laptop" />
+          </div>
+          <div data-tooltip-content="カメラ" data-tooltip-id="like">
+            <IconWithBackground icon="camera" />
+          </div>
+          <div data-tooltip-content="ゲーム" data-tooltip-id="like">
+            <IconWithBackground icon="game" />
+          </div>
+          <div data-tooltip-content="カフェ" data-tooltip-id="like">
+            <IconWithBackground icon="coffee" />
+          </div>
+          <div data-tooltip-content="スイーツ" data-tooltip-id="like">
+            <IconWithBackground icon="doughnut" />
+          </div>
         </div>
       </section>
 

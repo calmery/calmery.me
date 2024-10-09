@@ -15,10 +15,6 @@ export const Engineering: React.FC = () => {
       <Callout icon="memo">
         趣味開発は{" "}
         <ExternalLink href="https://github.com/calmery">@calmery</ExternalLink>{" "}
-        や{" "}
-        <ExternalLink href="https://github.com/calmery">
-          @calmery-chan
-        </ExternalLink>{" "}
         で行なっています。使用言語などは
         <ExternalLink
           className={clsx("px-4")}
