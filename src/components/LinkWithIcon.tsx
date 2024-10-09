@@ -15,20 +15,18 @@ export const LinkWithIcon: React.FC<LinkWithIconProps> = ({
   icon,
 }) => {
   return (
-    <Link href={href} passHref>
-      <a target="_blank" rel="noopener noreferrer">
-        <div className={clsx("cursor-pointer", "flex", "gap-16")}>
-          <IconWithBackground icon={icon} />
-          <div className={clsx("flex", "flex-col", "gap-2", "py-4")}>
-            <p className={clsx("font-black", "text-16", "text-secondary")}>
-              {children}
-            </p>
-            <p className={clsx("font-black", "text-14", "text-tertiary")}>
-              {href.replace(/^https?:\/\//g, "")}
-            </p>
-          </div>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <div className={clsx("cursor-pointer", "flex", "gap-16")}>
+        <IconWithBackground icon={icon} />
+        <div className={clsx("flex", "flex-col", "gap-2", "py-4")}>
+          <p className={clsx("font-black", "text-16", "text-secondary")}>
+            {children}
+          </p>
+          <p className={clsx("font-black", "text-14", "text-tertiary")}>
+            {href.replace(/^https?:\/\//g, "")}
+          </p>
         </div>
-      </a>
-    </Link>
+      </div>
+    </a>
   );
 };
