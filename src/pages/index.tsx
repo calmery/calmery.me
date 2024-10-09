@@ -101,8 +101,8 @@ const Sidebar: React.FC = () => {
         </Heading>
         <div className={clsx("flex", "gap-16", "flex-col")}>
           <nav className={clsx("flex", "flex-col", "gap-16")}>
-            <LinkWithIcon href="https://twitter.com/calmeryme" icon="twitter">
-              Twitter
+            <LinkWithIcon href="https://x.com/calmeryme" icon="x">
+              X
             </LinkWithIcon>
             <LinkWithIcon href="https://github.com/calmery" icon="github">
               GitHub

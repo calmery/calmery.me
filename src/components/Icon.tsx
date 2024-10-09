@@ -26,7 +26,8 @@ export interface IconProps {
     | "technologist"
     | "twitter"
     | "warning"
-    | "wave";
+    | "wave"
+    | "x";
   inline?: boolean;
   size: number;
 }
