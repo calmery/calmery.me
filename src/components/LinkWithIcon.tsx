@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Link from "next/link";
 import type { IconProps } from "./Icon";
 import { IconWithBackground } from "./IconWithBackground";
 

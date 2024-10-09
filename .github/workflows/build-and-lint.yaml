@@ -7,7 +7,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: npm
-          node-version: "16.17.0"
+          node-version: "20.18.0"
       - uses: actions/cache@v3
         with:
           key: "${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}"
@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: npm
-          node-version: "16.17.0"
+          node-version: "20.18.0"
       - uses: actions/cache@v3
         with:
           key: "${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}"
@@ -36,13 +36,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: npm
-          node-version: "16.17.0"
+          node-version: "20.18.0"
       - uses: actions/cache@v3
         with:
           key: "${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}"
           path: "**/node_modules"
       - run: "corepack enable npm"
-      - run: "npm set-script prepare ''"
       - run: "npm ci --legacy-peer-deps"
 
 name: "Build and lint"
